@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="projet GMAIL Laetitia MICHEL">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicone/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicone/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicone/favicon-16x16.png">
+    <link rel="manifest" href="./favicone/site.webmanifest">
+
+    <link rel="stylesheet" href="./css/body.css">
+
+    <title>Maison des ligues</title>
+</head>
+
+<body>
+<header class="page_accueil">
+    <h1 class="h1_accueil">
+        Maison des ligues tous les sports 
+    </h1>
+</header>
+<main id="formulaire">
+    <div class="display grid">
+        <div class="img_ligues">
+            <img href="#">
+        </div>
+        <div>
+            <img href="#">
+        </div>
+    </div>
+    <div class="formulaire_inscription" id="inscription">
+       
+        <!-- formulaire pour créer un compte -->
+        <div class="inner-form_inscription" 
+        <!-- aria-labelledby="creeruncompte nomCreerUnComptee prenomCreerUnCompte emailcreation mdpCreation btncreationcompte"> -->
+            <fieldset> <!-- encadré qui contient le formulaire-->
+                <legend>
+                    Inscription
+                </legend>
+                <form action="#" method="get" id="inscription">  
+                    <label for="nomInscription">
+                        Nom
+                    </label>
+                        <input 
+                        id="nomInscription"
+                        type="text"
+                        name="nom"
+                        placeholder="Nom" 
+                        autofocus="true" 
+                        aria-required="true"
+                        >
+    
+                    <label for="prenomInscription">
+                        Prénom
+                    </label>
+                        <input
+                        id="prenomInscription"
+                        type="text"
+                        name="prenom"
+                        placeholder="Prénom"
+                        aria-required="true"
+                        >
+                    <label for="ageInscription">
+                        Age
+                    </label>
+                        <input
+                        id="ageInscription" 
+                        type="date"
+                        name="age"
+                        placeholder="Age"
+                        aria-required="true"
+                        >
+                    <label for="villeInscription">
+                        Ville
+                    </label>
+                        <input
+                        id="villeInscription" 
+                        type="search"
+                        name="ville"
+                        placeholder="Ville"
+                        aria-required="true"
+                        >
+                    <label for="emailInscription">
+                        E-mail
+                    </label>
+                        <input 
+                        id="emailInscription"
+                        type="email"
+                        name="mail"
+                        placeholder="Votre email"
+                        aria-required="true"
+                        >
+                    <label for="photoInscription">
+                        Télécharger une photo
+                    </label>
+                        <input 
+                            id="photoInscription"
+                            type="image"
+                            name="image"
+                            aria-required="true"
+                            >
+                    <input
+                        id="btnValiderInscription"
+                        type="submit"
+                        value="valider "
+                        >
+                </form>
+            </fieldset>    
+        </div>
+</main>
+<footer>
+    &copy;
+</footer>
+</body>
+</html>
