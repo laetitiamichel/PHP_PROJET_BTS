@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* RESET */
+
+html{ /* sélecteur propriété valeur */
+    font-size: 62.5%;  /* 1.000rem root em 10px */
+    scroll-behavior: smooth;
+  }
+
+body{
+      font: 1.6rem sans-serif;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 1px;
+      position: relative;
+  }
+
+h1,h2,h3,img{
+    margin: 0;
+    padding: 0;
+  }
+
+header,figure,nav,main{
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Open Sans', sans-serif;
+      
+  }
+
+  :root{
+    --color-button-gmail: #F2A0ED;
+    --bgcolor: #AE6BF2;
+    --bgcolor-formulaire: #3E3E40;
+    --bgcolor-formulaire-gris: #85F2DE;
+    --color-button: #0D0D0D;
+  }
+
+*{
+    box-sizing: border-box;
+  }
+
+ /*  THEME */
+
+ .page_accueil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+ }
+ .h1_accueil{
+    display: flex;
+    width: 60%;
+    height: 10%;
+    border-radius: 1rem;
+ }
