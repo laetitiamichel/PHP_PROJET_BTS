@@ -1,2 +1,2 @@
 # COLORIMETRIE
-![AdobeColor-Graphisme](https://hackmd.io/_uploads/HkmZ4Fk66.jpg)
+[MAQUETTE GRAPHIQUE MAISON LIGUES-min](https://hackmd.io/_uploads/B1arDVm6p.jpg)
