@@ -15,19 +15,18 @@ body{
       position: relative;
   }
 
-h1,h2,h3,img{
+h1,h2,h3,h4,img{
     margin: 0;
     padding: 0;
   }
 
-header,figure,nav,main{
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-family: 'Open Sans', sans-serif;
-      
-  }
-
+  header,p,a,main,footer{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    
+}
   :root{
     --color-form: #F2A0ED;
     --bgcolor-P: #AE6BF2;
@@ -48,13 +47,28 @@ header,figure,nav,main{
   color: var(--color-texte);
   
  }
-
+ .ligne_rose{
+    background-color: var(--color-form);
+    width: 0.5rem;
+    height: 100vh;
+    position: fixed;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  .ligne_verte{
+    background-color: var(--bgcolor-bouton);
+    width: 0.5rem;
+    height: 100vh;
+    position: fixed;
+    margin-left: 4rem;
+    margin-top: 0;
+  }
 header{
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement */
   width: 80%;
-  margin: 3rem auto;
+  margin: 1rem auto;
   padding: 3rem;
   background-color: var(--bgcolor-H) ;
   color: var(--color-texte);
@@ -151,3 +165,9 @@ input[type="submit"]{
     line-height: 5rem;
     border-radius: .4rem;
  }
+
+ footer{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+  }
