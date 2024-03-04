@@ -124,4 +124,5 @@ header{
 .clic_inscription{
   text-decoration: none;
   color: var(--color-texte);
+  cursor: pointer;
 }
