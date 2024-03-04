@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicone/favicon-16x16.png">
     <link rel="manifest" href="./favicone/site.webmanifest">
 
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/formulaire.css">
 
     <title>Maison des ligues</title>
 </head>
@@ -22,19 +22,32 @@
     </h1>
 </header>
 <main id="formulaire">
-    <div class="display grid">
-        <div class="img_ligues">
-            <img href="#">
-        </div>
-        <div>
-            <img href="#">
-        </div>
-    </div>
+    <ul class="display_grid">
+        <li class="img_accueil">
+            <img src="./asset/ligue_1.png" alt="ligue angers">
+            <legend>content</legend>
+        </li>
+        <li class="img_accueil">
+            <img src="./asset/ligue_2.png" alt="ligue fc nantes">
+            <legend>content</legend>
+        </li>
+        <li class="img_accueil">
+            <img src="./asset/ligue_3.png" alt="ligue montpellier">
+            <legend>content</legend>
+        </li>
+        <li class="img_accueil">
+            <img src="./asset/ligue_4.png" alt="ligue losc">
+            <legend>content</legend>
+        </li>
+        <li class="img_accueil">
+            <img src="./asset/ligue_5.png" alt="ligue paris">
+            <legend>content</legend>
+        </li>
+    </ul>
     <div class="formulaire_inscription" id="inscription">
        
         <!-- formulaire pour créer un compte -->
-        <div class="inner-form_inscription" 
-        <!-- aria-labelledby="creeruncompte nomCreerUnComptee prenomCreerUnCompte emailcreation mdpCreation btncreationcompte"> -->
+        <div class="inner-form_inscription">
             <fieldset> <!-- encadré qui contient le formulaire-->
                 <legend>
                     Inscription
@@ -92,7 +105,7 @@
                         placeholder="Votre email"
                         aria-required="true"
                         >
-                    <label for="photoInscription">
+                    <label for="photoInscription" id="photo">
                         Télécharger une photo
                     </label>
                         <input 

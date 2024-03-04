@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* RESET */
+
+html{ /* sélecteur propriété valeur */
+    font-size: 62.5%;  /* 1.000rem root em 10px */
+    scroll-behavior: smooth;
+  }
+
+body{
+      font: 1.6rem sans-serif;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 1px;
+      position: relative;
+  }
+
+h1,h2,h3,img{
+    margin: 0;
+    padding: 0;
+  }
+
+header,figure,nav,main{
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Open Sans', sans-serif;
+      
+  }
+
+  :root{
+    --color-form: #F2A0ED;
+    --bgcolor-P: #AE6BF2;
+    --bgcolor-H: #3E3E40;
+    --bgcolor-bouton: #85F2DE;
+    --color-bg: #0D0D0D;
+    --color-texte: #fff;
+  }
+
+*{
+    box-sizing: border-box;
+  }
+
+ /*  THEME */
+
+ body{
+  background-color: var(--color-bg);
+  color: var(--color-texte);
+  
+ }
+
+header{
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  width: 80%;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: var(--bgcolor-H) ;
+  color: var(--color-texte);
+  border-radius: 1rem;
+  text-align: center;
+ }
+
+ .display_grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bgcolor-H);
+    width: 80%;
+    border-radius: 1rem;
+    color: #0D0D0D;
+    text-align: center;
+    list-style: none;
+   }
+   .img_accueil{
+    margin: 1rem;
+    background-color: var(--bgcolor-bouton);
+   }
+   legend{
+    padding: 2rem;
+   }
+
+
+/*  FORMULAIRE */
+
+input[type="text"],
+input[type="date"],  
+input[type="search"],
+input[type="email"],
+input[type="image"],
+input[type="submit"]{
+    border: 0;   
+}
+
+.inner-form_inscription{
+    border-radius: 1rem;
+}
+.inner-form_inscription fieldset legend{
+    padding: 1rem;
+    font-size: large;
+}
+.inner-form_inscription{
+    width: 50%;
+    margin: 5rem auto 2rem;
+}
+.inner-form_inscription form *{
+    display: block;
+    padding: 1rem;
+}
+#photo{
+    padding-left: 0rem;
+    font-weight: bolder;
+    color: var(--bgcolor-bouton);
+}
+.inner-form_inscription form input{
+    border-bottom: solid .3rem var(--bgcolor-bouton);
+    width: 100%;
+    line-height: 3.5rem;
+    padding: 0 .1rem;
+}
+
+.inner-form_inscription form input[type="image"],
+.inner-form_inscription form input[type="submit"]{
+    border-bottom: none; 
+}
+
+.inner-form_inscription form [placeholder]{
+    transition: all .6s ease-in-out;
+    padding: 0.8rem;
+    color: var(--bgcolor-H);
+}
+
+/* bouton VALIDER */
+.inner-form_inscription form input[type="submit"]{
+    background-color: var(--color-form);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: inherit;
+    line-height: 5rem;
+    border-radius: .4rem;
+ }
