@@ -1,2 +1,4 @@
 # COLORIMETRIE
 [MAQUETTE GRAPHIQUE MAISON LIGUES-min](https://hackmd.io/_uploads/B1arDVm6p.jpg)
+
+[MAQUETTE GRAPHIQUE MAISON LIGUES.pdf](https://github.com/laetitiamichel/PHP_PROJET_BTS/files/14481102/MAQUETTE.GRAPHIQUE.MAISON.LIGUES.pdf)
