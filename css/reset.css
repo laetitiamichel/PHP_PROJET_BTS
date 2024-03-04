@@ -29,11 +29,12 @@ header,figure,nav,main{
   }
 
   :root{
-    --color-button-gmail: #F2A0ED;
-    --bgcolor: #AE6BF2;
-    --bgcolor-formulaire: #3E3E40;
-    --bgcolor-formulaire-gris: #85F2DE;
-    --color-button: #0D0D0D;
+    --color-form: #F2A0ED;
+    --bgcolor-P: #AE6BF2;
+    --bgcolor-H: #3E3E40;
+    --bgcolor-bouton: #85F2DE;
+    --color-bg: #0D0D0D;
+    --color-texte: #fff;
   }
 
 *{
@@ -42,15 +43,91 @@ header,figure,nav,main{
 
  /*  THEME */
 
- .page_accueil{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+ body{
+  background-color: var(--color-bg);
+  color: var(--color-texte);
+  
  }
- .h1_accueil{
-    display: flex;
-    width: 60%;
-    height: 10%;
-    border-radius: 1rem;
+
+header{
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  width: 80%;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: var(--bgcolor-H) ;
+  color: var(--color-texte);
+  border-radius: 1rem;
+  text-align: center;
  }
+
+/* .h1_accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+ } */
+ .h2_accueil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+ }
+
+ .p_accueil{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 70%;
+  margin: 1rem auto;
+  padding: 5rem;
+  background-color: #AE6BF2;
+  border-radius: 1rem;
+  text-align: center;
+  line-height: 3rem;
+ }
+
+ .display_grid{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 5rem auto;
+  padding: 5rem;
+  background-color: var(--bgcolor-H);
+  width: 80%;
+  border-radius: 1rem;
+  color: #0D0D0D;
+  text-align: center;
+  list-style: none;
+ }
+ .img_accueil{
+  margin: 1rem;
+  background-color: var(--bgcolor-bouton);
+ }
+ legend{
+  padding: 2rem;
+ }
+
+ .bouton_inscription{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: var(--color-form);
+  width: 40%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: var(--color-bg);
+ }
+.clic_inscription{
+  text-decoration: none;
+  color: var(--color-texte);
+}
