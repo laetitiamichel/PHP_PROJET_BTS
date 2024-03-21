@@ -100,13 +100,13 @@ header{
 
 .bouton_accueil{
     display: flex;
-    margin-left: 30%;
-    margin-top: 3rem;
+    justify-content: center; 
+    align-items: center;
+    margin: 5rem auto;
     background-color: var(--color-form);
     padding: 2rem;
     width: 20%;
-    border-radius: 2rem;
-    
+    border-radius: 2rem;    
 } 
     
 
@@ -126,4 +126,13 @@ footer{
   display:flex;
   justify-content: center; 
   align-items: center;
+  
+}
+.img_logo img{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 5rem auto;
+  width: 20%;
+  height: 15%;
 }

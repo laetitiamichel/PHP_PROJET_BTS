@@ -146,4 +146,13 @@ footer{
   display:flex;
   justify-content: center; 
   align-items: center;
+  
+}
+.img_logo img{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 5rem auto;
+  width: 20%;
+  height: 15%;
 }
