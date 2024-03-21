@@ -1,7 +1,13 @@
-# COLORIMETRIE
+[lien du site][(https://laetitiamichel.github.io/PHP_PROJET_BTS/)]
+---
+# MAQUETTE GRAPHIQUE:
 
-![Capture d'écran 2024-03-04 162548](https://hackmd.io/_uploads/Hy1QODmaT.png)
-
-![Capture d'écran 2024-03-04 162834](https://hackmd.io/_uploads/S1ChuDQTT.png)
+![Colorimétrie](https://hackmd.io/_uploads/rk3we2Npa.png)
+![Maquette_moodbord](https://hackmd.io/_uploads/rkPHrhEaT.png)
+![logo_jo](https://hackmd.io/_uploads/Bk8vS34TT.png)
+![Maquette](https://hackmd.io/_uploads/ByGvxh4p6.png)
+![Maquette_formulaire](https://hackmd.io/_uploads/SymGZ3NpT.png)
+![Maquette_ficheMembre](https://hackmd.io/_uploads/r18Sen4pT.png)
+---
 [maquette](https://www.figma.com/file/LxHTDDICYGSV2WcVPr34Oa/MAQUETTE-GRAPHIQUE-MAISON-LIGUES?type=whiteboard&node-id=0-1&t=E7Gmwt2ZpKqrVJUz-0)
 
