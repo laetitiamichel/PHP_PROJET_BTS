@@ -1,4 +1,4 @@
-[lien du site](https://laetitiamichel.github.io/PHP_PROJET_BTS/)
+[lien du site][(https://laetitiamichel.github.io/PHP_PROJET_BTS/)]
 ---
 # MAQUETTE GRAPHIQUE:
 
