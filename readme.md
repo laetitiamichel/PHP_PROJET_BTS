@@ -9,7 +9,8 @@
 ![Maquette_formulaire](https://hackmd.io/_uploads/SymGZ3NpT.png)
 ![Maquette_ficheMembre](https://hackmd.io/_uploads/r18Sen4pT.png)
 ---
-[maquette](https://www.figma.com/file/LxHTDDICYGSV2WcVPr34Oa/MAQUETTE-GRAPHIQUE-MAISON-LIGUES?type=whiteboard&node-id=0-1&t=E7Gmwt2ZpKqrVJUz-0)
+
+- [ ] [maquette](https://www.figma.com/file/LxHTDDICYGSV2WcVPr34Oa/MAQUETTE-GRAPHIQUE-MAISON-LIGUES?type=whiteboard&node-id=0-1&t=E7Gmwt2ZpKqrVJUz-0)
 
 # Création du MCD:
 ```
@@ -22,4 +23,4 @@ EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
 ![mocodo](https://hackmd.io/_uploads/rkB9UQjCa.png)
 
 # Arbre euristique:
-![ARBRE LIGUES (1)](https://hackmd.io/_uploads/HJQbDQsCT.png)
+![ARBRE LIGUES](https://hackmd.io/_uploads/HJQbDQsCT.png)
