@@ -3,7 +3,6 @@
 # MAQUETTE GRAPHIQUE:
 
 ![Colorimétrie](https://hackmd.io/_uploads/rk3we2Npa.png)
-![Maquette_moodbord](https://hackmd.io/_uploads/rkPHrhEaT.png)
 ![logo_jo](https://hackmd.io/_uploads/Bk8vS34TT.png)
 ![Maquette](https://hackmd.io/_uploads/ByGvxh4p6.png)
 ![Maquette_formulaire](https://hackmd.io/_uploads/SymGZ3NpT.png)
