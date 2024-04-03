@@ -1,7 +1,4 @@
-<?php
-    session_start();
-    include_once __DIR__ ."/controller.inc.php";
-?>
+
 <!DOCTYPE html>
 <html lang="<?= Page::$_lang[0] ?>">
 <head>

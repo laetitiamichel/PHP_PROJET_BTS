@@ -30,15 +30,12 @@ class Inscription {
             $nom = $this->dataValidate($nom);
             $prenom = $this->dataValidate($prenom);
             $age = $this->dataValidate($age);
-    
-    
             $ville = $this->dataValidate($ville);
             $email = $this->dataValidate($email);
     
             // Enregistrement dans la base de données
            $bdd = $this->bdd->prepare('INSERT INTO clients (nom, prenom, age, ville, email, image) VALUES (?, ?, ?, ?, ?, ?)');
            $bdd->execute([$nom, $prenom, $age, $ville, $email, $image]);
-    
             print "Inscription réussie!";
         }
     

@@ -1,8 +1,6 @@
 <!-- confirmation.php -->
-<?php
-    
-    include_once __DIR__ ."head.inc.php";
-    
+<?php 
+    include_once __DIR__ ."head.inc.php";  
 ?>
 <body>
 <div class="ligne_rose"></div>
@@ -18,7 +16,7 @@
     // démarrer la session
     session_start();
     $prenom = $_GET['prenom'] ?? '';
-    //récupérer les données du memebre depuis la session:
+    //récupérer les données du membre depuis la session:
     $newUser = $_SESSION['membre'] ?? null;
     //afficher les données du membre:
     if($newUser){
