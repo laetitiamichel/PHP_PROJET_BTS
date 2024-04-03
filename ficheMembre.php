@@ -39,7 +39,7 @@
                 Prénom : " .$newUser['prenom']."
             </li>
             <li>
-                Date de naissance : " .$newUser['dateNaissance']."
+                Date de naissance : " .$newUser['age']."
             </li>
             <li>
                 Ville : " .$newUser['ville']."
@@ -51,19 +51,16 @@
         </div>
         <h4 class="photo_membre">Votre photo</h4>
         <figure class="photo_membre">
-            <img src='" .$newUser['photo']."' alt=' Photo du memebre'>
+            <img src='" .$newUser['image']."' alt=' Photo du memebre'>
         </figure>
         <div class="bouton_accueil">
-            <a class="clic_retour_accueil" type="button" href="./page_accueil.html" target="blank">Revenir à l'accueil</a>
+            <a class="clic_retour_accueil" href="connexionMembre.inc.php" target="blank">Revenir à l'accueil</a>
         </div>
     </div>";
     }
     else{
         echo "<p>Merci de vous être inscrit. Votre formulaire a été soumis avec succès.</p>"
     }
-
-    //destruction session:
-    session_destroy();
 ?>
 </main>
 <footer>

@@ -1,5 +1,5 @@
 <?php
-    const title = "Maison des Lgues";
+    const title = "Maison des Ligues";
         $_date = date("Y-m-d");
 
     /* création d'une classe avec les différentes variables, commence par une majuscule */

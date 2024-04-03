@@ -21,7 +21,7 @@
                 <legend>
                     Inscription
                 </legend>
-                <form action="formulaire_inscription.php" method="post" id="inscription" >  
+                <form action="formulaire_inscription.php" method="post" id="inscription" enctype="multipart/form-data">  
                     <label for="nomInscription">
                         Nom
                     </label>

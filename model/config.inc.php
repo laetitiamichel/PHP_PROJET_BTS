@@ -22,7 +22,7 @@
         $ville = $_POST["ville"];
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $image = $_POST["image"];
+        $image = $_FILES["image"];
     
         // Valider les données du formulaire
         $errors = [];
@@ -34,7 +34,35 @@
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Adresse email invalide";
         }
+        
+        if ($_FILES['image']["error"] == UPLOAD_ERR_OK) {
+            $photoName = htmlspecialchars(basename($_FILES['image']['name']));
+            
+            # Vérifier l'extension et autoriser une extention
+            $allowed_extensions = array("jpg", "jpeg", "png");
+            $photo_extension = strtolower(pathinfo($photoName, PATHINFO_EXTENSION));
     
+            if (!in_array($photo_extension, $allowed_extensions)) {
+                $errors[] = "L'extension de la photo doit être jpg, jpeg, ou png.";
+            }
+    
+            # Vérifier la taille maximale (2 Mo)
+            $max_size = 2 * 1024 * 1024; 
+            if ($_FILES['image']["size"] > $max_size) {
+                $errors[] = "La taille de la photo ne doit pas dépasser 2 Mo.";
+            }
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                // Le fichier image a été téléchargé avec succès
+                // Vous pouvez accéder aux informations sur le fichier à partir de $_FILES['image']
+                $photoName = $_FILES['image']['name']; // Nom du fichier
+                $photoTmpName = $_FILES['image']['tmp_name']; // Emplacement temporaire du fichier
+                $photoType = $_FILES['image']['type']; // Type MIME du fichier
+                $photoSize = $_FILES['image']['size']; // Taille du fichier en octets
+                move_uploaded_file($_FILES['image']['tmp_name'], "uploads/" . $photoName);
+        } else {
+            $errors[] = "Erreur lors du téléchargement de la photo.";
+        }
+
         // Si aucune erreur, procéder à l'insertion dans la base de données
         if (empty($errors)) {
             try {
@@ -54,12 +82,10 @@
                 $requete->bindParam(4, $ville);
                 $requete->bindParam(5, $email);
                 $requete->bindParam(6, $motDePasseHash);
-                $requete->bindParam(7, $image);
+                $requete->bindParam(7, $photoName);
     
                 // Exécuter la requête
                 $requete->execute();
-                // Déplacer le fichier téléchargé vers le dossier uploads
-                move_uploaded_file($photoTmpName, $photoDestination);
                 //echo "<p class='ok'>'inscription réussie'</p>";
                 $_SESSION['prenom'] = $_POST["prenom"];
                 echo '<a class="success">' . $_SESSION['prenom'] . '</a><em class="success"> Enregistrement réussi ! </em><a href="ficheMembre.php" class="connec"> connectez-vous </a>';
@@ -72,9 +98,10 @@
             foreach ($errors as $error) {
                 echo "<p class='error'>$error</p>";
             }
-            include_once __DIR__ . "/formulaire_inscription.php"; // Inclure le formulaire d'inscription
+           // include_once __DIR__ . "/formulaire_inscription.php"; // Inclure le formulaire d'inscription
         }
    }
+}
     
 
 ?>
