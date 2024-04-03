@@ -9,8 +9,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
-
-    <link rel="stylesheet" href="./css/formulaire.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/formulaire.css">
+    <link rel="stylesheet" href="../css/reset.css">
 
     <title>Maison des ligues</title>
 </head>
@@ -24,35 +25,13 @@
     </h1>
 </header>
 <main >
-    <ul class="display_grid">
-        <li class="img_accueil">
-            <img src="./asset/ligue_1.png" alt="ligue angers">
-            <legend>content</legend>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/ligue_2.png" alt="ligue fc nantes">
-            <legend>content</legend>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/ligue_3.png" alt="ligue montpellier">
-            <legend>content</legend>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/ligue_4.png" alt="ligue losc">
-            <legend>content</legend>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/ligue_5.png" alt="ligue paris">
-            <legend>content</legend>
-        </li>
-    </ul>
     <div class="formulaire_inscription" id="inscription">
        
         <!-- formulaire pour créer un compte -->
         <div class="inner-form_inscription">
             <fieldset> <!-- encadré qui contient le formulaire-->
                 <legend>
-                    Inscription
+                    Confirmation de supression de membre
                 </legend>
                 <form action="#" method="get" id="inscription">  
                     <label for="nomInscription">
@@ -107,27 +86,33 @@
                         placeholder="Votre email"
                         aria-required="true"
                         >
-                    <label for="photoInscription" id="photo">
-                        Télécharger une photo
-                    </label>
+                        <label for="photo">
+                            <span class="material-symbols-outlined">download</span>
+                                Téléchargez votre photo :
                         <input 
-                            id="photoInscription"
-                            type="image"
-                            name="image"
-                            aria-required="true"
-                            >
-                    <input
+                        type="file" 
+                        id="photoInscription" 
+                        name="image" 
+                        accept="image/*" 
+                        required placeholder="">
+                    </label>
+                   <!--  <input
                         id="btnValiderInscription"
                         type="submit"
-                        value="valider "
-                        >
+                        value="Modifier "
+                        > -->
                 </form>
             </fieldset>    
+        </div>
+        <div class="btn_admin">
+            <div class="bouton_modifier">
+                <a class="clic_modifier"  href="#" target="blank">Supprimer</a>
+            </div>
         </div>
 </main>
 <footer>
     <div class="img_logo">
-        <img src="./asset/maquette_graphique/logo_jo.png" alt="logo jeux olympique">
+        <img src="../asset/php/logo_jo.png" alt="logo jeux olympique">
     </div>
 </footer>
 </body>

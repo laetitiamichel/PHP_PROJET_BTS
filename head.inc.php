@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="<?= Page::$_manifest ?>">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="<?= $_page->_link_formulaire ?>">
     <link rel="stylesheet" href="<?= $_page->_link_ficheMembre ?>">
     <link rel="stylesheet" href="<?= $_page->_link_reset ?>">

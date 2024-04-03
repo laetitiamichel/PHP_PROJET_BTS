@@ -76,28 +76,55 @@ header{
   border-radius: 1rem;
   text-align: center;
  }
+ .page_ficheAdmin{
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  width: 40%;
+  margin: 1rem auto;
+  padding: 3rem;
+  background-color: var(--bgcolor-H) ;
+  color: var(--color-texte);
+  border-radius: 1rem;
+  text-align: center;
+ }
  .h2_fiche{
     display: flex;
-    margin-left: 30%;
+     justify-content: center; 
+    align-items: center;
     padding: 1rem;
     font-size: 1.5rem;
    }
    .h3_fiche{
     display: flex;
-    margin-left: 30%;
+    justify-content: center; 
+    align-items: center;
     padding: 1rem;
     font-size: 2.5rem;
    }
+li{
+  margin: 1rem;
+}
+h4{
+  margin: 2rem;
+}
 .fiche_membre{
     display: flex;
-    margin-left: 30%;
+    justify-content: center; 
+    align-items: center;
     padding: 1rem;
 }
 .photo_membre{
     display: flex;
-    margin-left: 30%;
+    justify-content: center; 
+    align-items: center;   
+}
+img{
+  width: 15%;
+
 }
 
+/* BOUTON FICHE MEMBRE*/
 .bouton_accueil{
     display: flex;
     justify-content: center; 
@@ -108,19 +135,61 @@ header{
     width: 20%;
     border-radius: 2rem;    
 } 
-    
-
 .clic_retour_accueil{
-    text-decoration: none;
-    color: var(--color-texte);
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    height: auto;
-    text-transform: uppercase;
-    font-size: inherit;
-    
+  text-decoration: none;
+  color: var(--color-texte);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  height: auto;
+  text-transform: uppercase;
+  font-size: inherit;
+  
 }
+
+/* BOUTON FICHE MEMBRE ADMIN */
+.btn_admin{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  width: 60%;
+  margin: 1rem auto;
+}   
+.bouton_modifier{
+margin: 5rem auto;
+background-color: var(--color-form);
+padding: 2rem;
+width: 20%;
+border-radius: 2rem; 
+text-align: center;   
+}
+.clic_modifier{
+  text-decoration: none;
+  
+  color: var(--color-texte);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  height: auto;
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.clic_supprimer{
+  text-decoration: none;
+  color: var(--color-texte);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  height: auto;
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+
+
+
 
 footer{
   display:flex;

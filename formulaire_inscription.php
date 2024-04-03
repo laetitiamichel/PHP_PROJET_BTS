@@ -1,3 +1,6 @@
+<?php
+    include_once __DIR__ ."/head.inc.php";
+?>
 <body>
 <div class="ligne_rose"></div>
 <div class="ligne_verte"></div>
@@ -9,28 +12,30 @@
 <main >
     <ul class="display_grid">
         <li class="img_accueil">
-            <img src="./asset/ligue_1.png" alt="ligue angers">
+            <img src="https://placehold.co/400x400" alt="ligue angers">
             <legend>content</legend>
         </li>
         <li class="img_accueil">
-            <img src="./asset/ligue_2.png" alt="ligue fc nantes">
+            <img src="https://placehold.co/400x400" alt="ligue fc nantes">
             <legend>content</legend>
         </li>
         <li class="img_accueil">
-            <img src="./asset/ligue_3.png" alt="ligue montpellier">
+            <img src="https://placehold.co/400x400" alt="ligue montpellier">
             <legend>content</legend>
         </li>
         <li class="img_accueil">
-            <img src="./asset/ligue_4.png" alt="ligue losc">
+            <img src="https://placehold.co/400x400" alt="ligue losc">
             <legend>content</legend>
         </li>
         <li class="img_accueil">
-            <img src="./asset/ligue_5.png" alt="ligue paris">
+            <img src=".https://placehold.co/400x400" alt="ligue paris">
             <legend>content</legend>
         </li>
     </ul>
     <div class="formulaire_inscription" id="inscription">
-       
+    <?php
+                   include_once __DIR__ ."/connexionMembre.inc.php"
+                ?>   
         <!-- formulaire pour créer un compte -->
         <div class="inner-form_inscription">
             <fieldset> <!-- encadré qui contient le formulaire-->
@@ -90,15 +95,16 @@
                         placeholder="Votre email"
                         aria-required="true"
                         >
-                    <label for="photoInscription" id="photo">
-                        Télécharger une photo
-                    </label>
-                        <input 
-                            id="photoInscription"
-                            type="image"
-                            name="image"
-                            aria-required="true"
-                            >
+                <label for="photo">
+                    <span class="material-symbols-outlined">download</span>
+                        Téléchargez votre photo :
+                <input 
+                type="file" 
+                id="photoInscription" 
+                name="image" 
+                accept="image/*" 
+                required placeholder="">
+            </label>
                     <input
                         id="btnValiderInscription"
                         type="submit"
@@ -106,14 +112,12 @@
                         >
                 </form>
             </fieldset>
-            <?php
-                   include_once __DIR__ ."/connexionMembre.inc.php"
-                ?>    
+             
         </div>
 </main>
 <footer>
     <div class="img_logo">
-        <img src="./asset/maquette_graphique/logo_jo.png" alt="logo jeux olympique">
+        <img src="./asset/php/logo_jo.png" alt="logo jeux olympique">
     </div>
 </footer>
 </body>
