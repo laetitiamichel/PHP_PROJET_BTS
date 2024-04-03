@@ -111,9 +111,34 @@
                         value="valider "
                         >
                 </form>
-            </fieldset>
-             
+            </fieldset>            
         </div>
+        <?php
+                      
+                      include_once __DIR__ ."/model/config.inc.php";
+                      include_once __DIR__ ."/controller.inc.php";
+                        // Déplacer la photo téléchargée vers un dossier (assurez-vous que le dossier "uploads" existe)
+                      //move_uploaded_file($photoTmpName, $photoDestination);
+      
+                      // Instancier la classe Inscription
+                      $inscription = new Inscription();
+      
+                      // Appeler la méthode d'inscription
+                      $inscription->inscrireMembre($nom, $prenom, $age, $ville, $email, $image);
+                      // Stocker les données du membre dans une session
+                        session_start();
+                        $_SESSION['membre'] = [
+                            'nom' => $nom,
+                            'prenom' => $prenom,
+                            'age' => $age,
+                            'ville' => $ville,
+                            'email' => $email,
+                            'image' => $photoDestination,
+                        ];
+                      // Rediriger l'utilisateur après l'inscription réussie
+                      header("Location: confirmation.php?prenom=" . urlencode($prenom));
+                     // exit();
+                      ?>
 </main>
 <footer>
     <div class="img_logo">

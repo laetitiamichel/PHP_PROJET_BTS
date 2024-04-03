@@ -1,3 +1,9 @@
+<!-- confirmation.php -->
+<?php
+    
+    include_once __DIR__ ."head.inc.php";
+    
+?>
 <body>
 <div class="ligne_rose"></div>
 <div class="ligne_verte"></div>
@@ -7,44 +13,60 @@
     </h1>
 </header>
 <main>
-    <div class="page_confirmation" id="confirmation">
+<div class="page_confirmation" id="confirmation">
+    <?php
+    // démarrer la session
+    session_start();
+    $prenom = $_GET['prenom'] ?? '';
+    //récupérer les données du memebre depuis la session:
+    $newUser = $_SESSION['membre'] ?? null;
+    //afficher les données du membre:
+    if($newUser){
+        echo"
         <h2 class="h2_fiche">
-            Merci vous êtes inscrit ! votre formulaire a été soumis avec succès.
+        Merci $prenom de vous être inscrit ! votre formulaire a été soumis avec succès.
         </h2>
         <h3 class="h3_fiche">
-            <span>
-                &#127942;
-            </span>
-            Vous êtes le nouveau membre
-        </h3>
-        <div class="fiche_membre">
-            <ul>
-                <li>
-                    Nom : 
-                </li>
-                <li>
-                    Prénom : 
-                </li>
-                <li>
-                    Date de naissance : 
-                </li>
-                <li>
-                    Ville : 
-                </li>
-                <li>
-                    Mail : 
-                </li>
-            </ul>
+        <span>
+            &#127942;
+        </span>
+        Vous êtes le nouveau membre:
+    </h3>
+    <div class="fiche_membre">
+        <ul>
+            <li>
+                Nom : " .$newUser['nom']."
+            </li>
+            <li>
+                Prénom : " .$newUser['prenom']."
+            </li>
+            <li>
+                Date de naissance : " .$newUser['dateNaissance']."
+            </li>
+            <li>
+                Ville : " .$newUser['ville']."
+            </li>
+            <li>
+                Mail : " .$newUser['email']."
+            </li>
+        </ul>   
         </div>
         <h4 class="photo_membre">Votre photo</h4>
-        <div class="photo_membre">
-            
-            <img src="./asset/ligue_3.png" alt="ligue montpellier">
-        </div>
+        <figure class="photo_membre">
+            <img src='" .$newUser['photo']."' alt=' Photo du memebre'>
+        </figure>
         <div class="bouton_accueil">
             <a class="clic_retour_accueil" type="button" href="./page_accueil.html" target="blank">Revenir à l'accueil</a>
         </div>
-    </div>
+    </div>";
+    }
+    else{
+        echo "<p>Merci de vous être inscrit. Votre formulaire a été soumis avec succès.</p>"
+    }
+
+    //destruction session:
+    session_destroy();
+?>
 </main>
 <footer>
     <div class="img_logo">

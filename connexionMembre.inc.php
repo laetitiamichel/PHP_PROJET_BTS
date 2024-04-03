@@ -11,6 +11,11 @@
         $ville = $_POST["ville"];
         $email = $_POST["email"];
         $image = $_POST["image"];
+        // Gérer le téléchargement de la photo
+        $photo = $_FILES['photo'] ?? '';
+        $photoName = $photo['name'] ?? '';
+        $photoTmpName = $photo['tmp_name'] ?? '';
+        $photoDestination = 'uploads/' . $photoName;
     
         // Valider les données du formulaire
         $errors = [];
@@ -43,7 +48,7 @@
         } else {
             $errors[] = "Erreur lors du téléchargement de la photo.";
         }
-        
+      
         // Si aucune erreur, procéder à l'insertion dans la base de données
         if (empty($errors)) {
             try {
