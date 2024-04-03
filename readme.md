@@ -24,4 +24,4 @@ EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
 ![mocodo](https://hackmd.io/_uploads/rkB9UQjCa.png)
 
 # Arbre euristique:
-![ARBRE LIGUES](https://hackmd.io/_uploads/HJQbDQsCT.png)
+![arbre](./asset/ARBRE_LIGUES.png)
