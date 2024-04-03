@@ -9,28 +9,24 @@ html{ /* sélecteur propriété valeur */
 body{
       font: 1.6rem sans-serif;
       height: 100vh;
+      margin: 0;
+      padding: 0;
       letter-spacing: 1px;
       position: relative;
   }
 
-h1,h2,h3,h4,ul{
+h1,h2,h3,h4,img{
     margin: 0;
     padding: 0;
   }
 
-header,p,a,main,footer{
-      margin: 0;
-      padding: 0;
-     /*  overflow: hidden; */
-      font-family: 'Open Sans', sans-serif;
-      
-  }
-  header{
-    margin: 0 auto;
-  
-    padding: 2rem;
-  }
-
+  header,p,a,main,footer{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    
+}
   :root{
     --color-form: #F2A0ED;
     --bgcolor-P: #AE6BF2;
@@ -44,4 +40,20 @@ header,p,a,main,footer{
     box-sizing: border-box;
   }
 
- 
+
+
+
+ footer{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    
+  }
+  .img_logo img{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 5rem auto;
+    width: 20%;
+    height: 15%;
+  }

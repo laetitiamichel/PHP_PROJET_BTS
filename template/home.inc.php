@@ -6,48 +6,9 @@
         Tous les mois profitez de toutes les nouveautés et opportunités.
     </br>A partir du mois prochain, on vous propose toutes les séances de sport sur vos supports préférés.
     </p>
-    <ul class="display_grid">
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue angers">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue fc nantes">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue montpellier">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue losc">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue paris">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue reims">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue saint etienne">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue bordeaux">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue marseille">
-            <h3>content</h3>
-        </li>
-        <li class="img_accueil">
-            <img src="./asset/athle.jpg" alt="ligue lyon">
-            <h3>content</h3>
-        </li>
-    </ul>
+    <?php
+    include_once __DIR__ ."/display_grid.inc.php";
+    ?>
     <div class="bouton_inscription">
         <a class="clic_inscription" href="./formulaire_inscription.php" target="blank">Cliquez pour vous inscrire</a>
     </div>
