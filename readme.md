@@ -2,9 +2,9 @@
 ---
 # MAQUETTE GRAPHIQUE:
 
-![Colorimétrie](https://hackmd.io/_uploads/rk3we2Npa.png)
+![Colorimétrie](./asset/php/colorimetrie.png)
 ## Création du logo:
-![logo_jo](https://hackmd.io/_uploads/Bk8vS34TT.png)
+![logo_jo](./asset/logo_jo.png)
 ## Création des formulaires:
 ![Maquette](https://hackmd.io/_uploads/ByGvxh4p6.png)
 ![Maquette_formulaire](https://hackmd.io/_uploads/SymGZ3NpT.png)
@@ -21,7 +21,7 @@ PUBLIER, 11 EVENEMENT, 0N CLIENTS
 
 EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
 ```
-![mocodo](https://hackmd.io/_uploads/rkB9UQjCa.png)
+![mocodo](./asset/MCD_LIGUES.png)
 
 # Arbre euristique:
 ![arbre](./asset/ARBRE_LIGUES.png)
