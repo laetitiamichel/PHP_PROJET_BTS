@@ -2,7 +2,7 @@
 ---
 # MAQUETTE GRAPHIQUE:
 
-![Colorimétrie](./asset/php/colorimetrie.png)
+![Colorimétrie](./asset/colorimetrie.png)
 ## Création du logo:
 ![logo_jo](./asset/logo_jo.png)
 ## Création des formulaires:
