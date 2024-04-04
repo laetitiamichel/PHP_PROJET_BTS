@@ -1,7 +1,8 @@
 <?php
-   
-   
-         // Configuration de la base de données
+ 
+class FormulaireMembre{
+    static function membre(){
+    // Configuration de la base de données
     $serveur = "localhost";
     $nomBaseDeDonnees = "client_ligue";
     $utilisateur = "root";
@@ -87,8 +88,11 @@
                 // Exécuter la requête
                 $requete->execute();
                 //echo "<p class='ok'>'inscription réussie'</p>";
-                $_SESSION['prenom'] = $_POST["prenom"];
-                echo '<a class="success">' . $_SESSION['prenom'] . '</a><em class="success"> Enregistrement réussi ! </em><a href="ficheMembre.php" class="connec"> connectez-vous </a>';
+                 header("Location: ficheMembre.php");
+                 exit;
+                //$_SESSION['prenom'] = $_POST["prenom"];
+
+                //echo '<a class="success">' . $_SESSION['prenom'] . '</a><em class="success"> Enregistrement réussi ! </em><a href="ficheMembre.php" class="connec"> connectez-vous </a>';
             } catch (PDOException $e) {
                 echo "Erreur de connexion à la base de données : " . $e->getMessage();
             }
@@ -102,6 +106,13 @@
         }
    }
 }
+}
+}
+   
+formulaireMembre::membre();    
+
+
     
+
 
 ?>

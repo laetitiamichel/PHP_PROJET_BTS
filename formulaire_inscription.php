@@ -1,14 +1,15 @@
 <?php
+    session_start();
     include_once __DIR__ ."/controller/controller.inc.php";
     include_once __DIR__."/template/head.inc.php";
-    
+  
 ?>
 <body>
 <div class="ligne_rose"></div>
 <div class="ligne_verte"></div>
 <?php 
-    include_once __DIR__ ."/template/header.inc.php"; 
-?>
+    include_once __DIR__ ."/template/headers.inc.php"; 
+    ?>
 <main >
 <?php
     include_once __DIR__ ."/template/display_grid.inc.php";
@@ -102,8 +103,9 @@
                 </form>
             </fieldset> 
             <?php
-                   include_once __DIR__ ."/model/config.inc.php"
-                    
+                   include_once __DIR__ ."/model/config.inc.php";
+                  
+                      
             ?>           
         </div>
     

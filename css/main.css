@@ -83,18 +83,19 @@ body{
   
    .bouton_inscription{
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
+    margin: 3rem auto; /* Espacement entre les boutons */
+     gap:2rem;
+   }
+  a.clic_inscription{
     background-color: var(--color-form);
-    width: 40%;
-    margin: 2rem auto;
-    padding: 2rem;
+    width: 30%;
+    line-height: 5rem;
     border-radius: 2rem;
     text-decoration: none;
-    color:black;
-   }
-  .clic_inscription{
-    text-decoration: none;
+    text-align: center;
     color: black;
     cursor: pointer;
   }
@@ -278,17 +279,11 @@ input[type="submit"]{
   
   
   footer{
-    display:flex;
-    justify-content: center; 
-    align-items: center;
-    
+    text-align: center; /* Centrer horizontalement */
+    margin-top: 7rem; /* Marge supérieure pour plus d'espace */ 
   }
-  /* .img_logo img{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin: 5rem auto;
+   .img_logo img{
     width: 20%;
-    height: 15%;
-  } */
+    height: auto;
+  } 
   

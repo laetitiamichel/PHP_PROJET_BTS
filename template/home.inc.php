@@ -11,5 +11,6 @@
     ?>
     <div class="bouton_inscription">
         <a class="clic_inscription" href="./formulaire_inscription.php" target="blank">Cliquez pour vous inscrire</a>
+        <a class="clic_inscription" href="./connexionMembre.inc.php" target="blank">Connectez-vous</a>
     </div>
 </main>

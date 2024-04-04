@@ -1,23 +1,26 @@
 <?php
     include_once __DIR__ ."/controller/controller.inc.php";
     include_once __DIR__."/template/head.inc.php";
-    session_start();
 ?>
 <body>
 <div class="ligne_rose"></div>
 <div class="ligne_verte"></div>
 <?php 
-    include_once __DIR__ ."/template/header.inc.php"; 
+    include_once __DIR__ ."/template/headers.inc.php"; 
 ?>
 <main >
 <div class="formulaire_inscription" id="inscription">
    
    <!-- formulaire pour créer un compte -->
    <div class="inner-form_inscription">
+        <div class="photo_membre">
+            <img src= <?= $_SESSION['image'] ?> alt='Photo du membre'>
+        </div>
        <fieldset> <!-- encadré qui contient le formulaire-->
            <legend>
                     Connection <?= $_SESSION['mail'] ?>
            </legend>
+          
            <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="post" id="connection" >
            <label for="emailConnection">
                        Entrez votre e-mail
