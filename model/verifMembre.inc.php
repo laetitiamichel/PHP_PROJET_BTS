@@ -30,16 +30,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Si aucune erreur, procéder à la vérification dans la base de données
-    if (empty($errors)) {
+    if (isset($_POST["email"]) || isset($_POST["password"])) {
         try {
             // Connexion à la base de données avec PDO
             $connexion = new PDO("mysql:host=$serveur;dbname=$nomBaseDeDonnees", $utilisateur, $motDePasse);
             $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Préparer la requête SQL pour récupérer l'utilisateur avec cet email
-            $requete = $connexion->prepare("SELECT * FROM clients WHERE email = ?");
-            $requete->execute([$email]);
-            $utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
+            $reponse = $connexion->query("SELECT * FROM clients WHERE email = ?");
+            $DATA = $reponse->fetch();
+            $mail = $_POST["email"];
+            $password = $_POST["password"];
+            //$requete->execute([$email]);
+            //$utilisateur = $requete->fetch(PDO::FETCH_ASSOC);
 
             // Vérifier si l'utilisateur existe et si le mot de passe est correct
             if ($utilisateur && password_verify($password, $utilisateur['password'])) {
@@ -63,3 +66,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
     }
 }
+VerifMembre::verification();

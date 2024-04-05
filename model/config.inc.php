@@ -88,11 +88,11 @@ class FormulaireMembre{
                 // Exécuter la requête
                 $requete->execute();
                 //echo "<p class='ok'>'inscription réussie'</p>";
-                 header("Location: ficheMembre.php");
-                 exit;
-                //$_SESSION['prenom'] = $_POST["prenom"];
+                 //header("Location: ficheMembre.php");
+                 //exit;
+                $_SESSION['prenom'] = $_POST["prenom"];
 
-                //echo '<a class="success">' . $_SESSION['prenom'] . '</a><em class="success"> Enregistrement réussi ! </em><a href="ficheMembre.php" class="connec"> connectez-vous </a>';
+                echo '<a class="success">' . $_SESSION['prenom'] . '</a><em class="success"> Enregistrement réussi ! </em><a href="ficheMembre.php" class="connec"> connectez-vous </a>';
             } catch (PDOException $e) {
                 echo "Erreur de connexion à la base de données : " . $e->getMessage();
             }

@@ -50,7 +50,7 @@
                     </label>
                         <input
                         id="ageInscription" 
-                        type="date"
+                        type="int"
                         name="age"
                         placeholder="Age"
                         aria-required="true"
