@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="projet Maison des Ligues MICHEL LAETITIA">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Maison des ligues</title>
+</head>
+
+<body>
+<div class="ligne_rose"></div>
+<div class="ligne_verte"></div>
+<header class="page_accueil" id="formulaire">
+    <h1 class="h1_accueil">
+        Maison des ligues tous les sports 
+    </h1>
+</header>
+<main >
+    <div class="formulaire_inscription" id="inscription">
+       
+        <!-- formulaire pour créer un compte -->
+        <div class="inner-form_inscription">
+            <fieldset> <!-- encadré qui contient le formulaire-->
+                <legend>
+                    Inscription
+                </legend>
+                <form action="./pages/formulaire_inscription.inc.php" method="post" id="inscription">  
+                   
+                    <label for="villeInscription">
+                        Password
+                    </label>
+                        <input
+                        id="villeInscription" 
+                        type="search"
+                        name="password"
+                        placeholder=""
+                        aria-required="true"
+                        >
+                    <label for="emailInscription">
+                        E-mail
+                    </label>
+                        <input 
+                        id="emailInscription"
+                        type="email"
+                        name="mail"
+                        placeholder="Votre email"
+                        aria-required="true"
+                        >
+                    
+                    <input
+                        id="btnValiderInscription"
+                        type="submit"
+                        value="valider "
+                        >
+                </form>
+            </fieldset>    
+        </div>
+</main>
+<footer>
+    <div class="img_logo">
+        <img src="./asset/logo_jo.png" alt="logo jeux olympique">
+    </div>
+</footer>
+</body>
+</html>
