@@ -2,7 +2,7 @@
 ---
 # MAQUETTE GRAPHIQUE:
 
-![Colorimétrie](./asset/colorimetrie.png)
+![Colorimétrie](./asset/Colorimetrie.png)
 ## Création du logo:
 ![logo_jo](./asset/logo_jo.png)
 ## Création des formulaires:
@@ -24,4 +24,4 @@ EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
 ![mocodo](./asset/MCD_LIGUES.png)
 
 # Arbre euristique:
-![arbre](./asset/ARBRE_LIGUES.png)
+![arbre](./asset/arbre_projet_web.png)
