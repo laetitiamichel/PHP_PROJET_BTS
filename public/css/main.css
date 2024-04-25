@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url(./reset.css);
+/*  THEME */
+body{
+    background-color: var(--color-bg);
+    color: var(--color-texte);   
+   }
+  .ligne_rose{
+    background-color: var(--color-form);
+    width: 0.5rem;
+    height: 100vh;
+    position: fixed;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  .ligne_verte{
+    background-color: var(--bgcolor-bouton);
+    width: 0.5rem;
+    height: 100vh;
+    position: fixed;
+    margin-left: 4rem;
+    margin-top: 0;
+  }
+  header.page_accueil{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */  
+    width: 80%;
+    margin: 2rem auto!important;
+    line-height: 6rem;
+    background-color: var(--bgcolor-H) ;
+    color: var(--color-texte);
+    border-radius: 1rem;
+    text-align: center;
+   }
+  
+   .h2_accueil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+   }
+  
+   .p_accueil{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 70%;
+    margin: 1rem auto;
+    padding: 5rem;
+    background-color: #AE6BF2;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 3rem;
+   }
+  
+   ul.display_grid{
+    display: grid;
+    max-width: 70%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style: none;
+    background-color: #3E3E40;
+    border-radius: 1rem;
+     }
+   .img_accueil img{
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    }
+    h3{
+      padding: 2rem;
+      background-color: var(--bgcolor-bouton);
+      color:black;
+    }
+  
+   .bouton_inscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin: 3rem auto; /* Espacement entre les boutons */
+     gap:2rem;
+   }
+  a.clic_inscription{
+    background-color: var(--color-form);
+    width: 30%;
+    line-height: 5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+  }
+  
+  /*  FORMULAIRE */
+
+input[type="text"],
+input[type="date"],  
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="image"],
+input[type="submit"]{
+    border: 0;   
+}
+
+.inner-form_inscription{
+    border-radius: 1rem;
+}
+.inner-form_inscription fieldset legend{
+    padding: 1rem;
+    font-size: large;
+}
+.inner-form_inscription{
+    width: 50%;
+    margin: 5rem auto 2rem;
+}
+.inner-form_inscription form *{
+    display: block;
+    padding: 1rem;
+}
+#photo{
+    padding-left: 0rem;
+    font-weight: bolder;
+    color: black;
+}
+.inner-form_inscription form input{
+    border-bottom: solid .3rem var(--bgcolor-bouton);
+    width: 100%;
+    line-height: 3.5rem;
+    padding: 0 .1rem;
+}
+
+.inner-form_inscription form input[type="image"],
+.inner-form_inscription form input[type="submit"]{
+    border-bottom: none; 
+}
+
+.inner-form_inscription form [placeholder]{
+    transition: all .6s ease-in-out;
+    padding: 0.8rem;
+    color: var(--bgcolor-H);
+}
+
+/* bouton VALIDER */
+.inner-form_inscription form input[type="submit"]{
+    background-color: var(--color-form);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    color: black;
+    text-transform: uppercase;
+    font-size: inherit;
+    line-height: 5rem;
+    border-radius: .4rem;
+ }
+/* FICHE MEMBRE */
+.page_ficheAdmin{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 40%;
+    margin: 1rem auto;
+    padding: 3rem;
+    background-color: var(--bgcolor-H) ;
+    color: var(--color-texte);
+    border-radius: 1rem;
+    text-align: center;
+   }
+   .h2_fiche{
+      display: flex;
+       justify-content: center; 
+      align-items: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+     }
+     .h3_fiche{
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      margin: 3rem;
+      padding: 1rem;
+      font-size: 2.5rem;
+      width: 100%;
+     }
+  li{
+    margin: 3rem;
+    line-height: 5rem;
+    text-align: left;
+  }
+  h4{
+    margin: 2rem;
+  }
+  .fiche_membre{
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      padding: 1rem;
+  }
+
+  .photo_membre{
+      display: flex;
+      justify-content: center; 
+      align-items: center;   
+  }
+  img{
+    width: 15%;
+  
+  }
+  
+  /* BOUTON FICHE MEMBRE*/
+  .page_membre{
+    text-align: center;
+    list-style: none;
+  }
+  .bouton_accueil{
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      margin: 5rem auto;
+      background-color: var(--color-form);
+      padding: 2rem;
+      width: 20%;
+      border-radius: 2rem;    
+  } 
+  .clic_retour_accueil{
+    text-decoration: none;
+    color: var(--color-texte);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    height: auto;
+    text-transform: uppercase;
+    font-size: inherit;
+    
+  }
+  
+  /* BOUTON FICHE MEMBRE ADMIN */
+  .btn_admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    width: 60%;
+    margin: 1rem auto;
+  }   
+  .bouton_modifier{
+  margin: 5rem auto;
+  background-color: var(--color-form);
+  padding: 2rem;
+  width: 20%;
+  border-radius: 2rem; 
+  text-align: center;   
+  }
+  .clic_modifier{
+    text-decoration: none;
+    
+    color: var(--color-texte);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    height: auto;
+    text-transform: uppercase;
+    font-size: inherit;
+  }
+  
+  .clic_supprimer{
+    text-decoration: none;
+    color: var(--color-texte);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    height: auto;
+    text-transform: uppercase;
+    font-size: inherit;
+  }
+  
+  
+  footer{
+    text-align: center; /* Centrer horizontalement */
+    margin-top: 7rem; /* Marge supérieure pour plus d'espace */ 
+  }
+   .img_logo img{
+    width: 20%;
+    height: auto;
+  } 
+  
+.img{
+    width: 100%;
+    border-radius: 2rem;
+}
