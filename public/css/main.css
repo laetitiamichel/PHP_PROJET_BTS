@@ -1,7 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url(./reset.css);
 /*  THEME */
+:root{
+  --color-form: #F2A0ED;
+  --bgcolor-P: #AE6BF2;
+  --bgcolor-H: #3E3E40;
+  --bgcolor-bouton: #85F2DE;
+  --color-bg: #0D0D0D;
+  --color-texte: #fff;
+}
 body{
     background-color: var(--color-bg);
     color: var(--color-texte);   
@@ -13,6 +20,33 @@ body{
     position: fixed;
     margin-left: 2rem;
     margin-top: 0;
+  }
+  .nav_bar{
+    width: 10%;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--color-form);
+    color: var(--color-texte);
+    margin-left: 0;
+    
+    line-height: 5rem;
+    border-radius: 1rem;
+  }
+  .menu_nav_bar{
+    height: 30%;
+    padding: 2rem;
+  /*   margin: 3rem auto; /* Espacement entre les boutons 
+    gap:2rem; */
+  }
+  a.menu_nav_bar{
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+    font-style: inherit;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
   }
   .ligne_verte{
     background-color: var(--bgcolor-bouton);
@@ -34,7 +68,7 @@ body{
     border-radius: 1rem;
     text-align: center;
    }
-  
+
    .h2_accueil{
     display: flex;
     justify-content: center;
@@ -85,18 +119,26 @@ body{
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    margin: 3rem auto; /* Espacement entre les boutons */
-     gap:2rem;
+    
    }
-  a.clic_inscription{
+  .clic_inscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     background-color: var(--color-form);
-    width: 30%;
+    width: 50rem;
     line-height: 5rem;
     border-radius: 2rem;
     text-decoration: none;
     text-align: center;
+    font-size: larger;
+    font-style: inherit;
     color: black;
     cursor: pointer;
+    padding: 1rem;
+    margin: 3rem auto; /* Espacement entre les boutons */
+    gap:2rem;
   }
   
   /*  FORMULAIRE */
@@ -112,19 +154,13 @@ input[type="submit"]{
 }
 
 .inner-form_inscription{
-    border-radius: 1rem;
+    width: 40%;
+    /* margin: 5rem auto 2rem; */
+    border-radius: 1rem;  
 }
-.inner-form_inscription fieldset legend{
-    padding: 1rem;
-    font-size: large;
-}
-.inner-form_inscription{
-    width: 50%;
-    margin: 5rem auto 2rem;
-}
-.inner-form_inscription form *{
-    display: block;
-    padding: 1rem;
+.label{
+  padding: 1rem 0 ;
+  font-size: 8rem;
 }
 #photo{
     padding-left: 0rem;
@@ -133,9 +169,7 @@ input[type="submit"]{
 }
 .inner-form_inscription form input{
     border-bottom: solid .3rem var(--bgcolor-bouton);
-    width: 100%;
-    line-height: 3.5rem;
-    padding: 0 .1rem;
+    background-color: aliceblue;
 }
 
 .inner-form_inscription form input[type="image"],

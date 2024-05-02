@@ -35,13 +35,14 @@ class EventController extends Controller
             'cover'=>'required|image',
         ]);
 
-       /*  dd($request->all());
- */
+      /*  dd($request->all()); */
+ 
        /* dd($request->all(), $request->nom,$request->description); */
         $nouvelEvent = new Event;
         $nouvelEvent->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
         $nouvelEvent->description = $request->description;
-        $nouvelEvent->image = null;
+       /*  stock l'image dans le dossier public/images */
+        $nouvelEvent->image = $request->cover->store('images', 'public');
         /* méthode save de la class model */
         $nouvelEvent->save();
 
