@@ -22,6 +22,22 @@ class RegisteredUserController extends Controller
     {
         return view('auth.register');
     }
+    /* pour afficher la fiche membre dans la vue dashbord*/
+    public function submit(Request $request)
+    {
+         // Valider les données reçues
+         $validatedData = $request->validate([
+            'nom' => ['required', 'string', 'max:255'],
+            'prenom' => ['required', 'string', 'max:255'],
+            'age' => ['required', 'string', 'max:255'],
+            'ville' => ['required', 'string', 'max:255'],
+        ]);
+
+        // Passer les données à la vue
+        return view('result', ['data' => $validatedData]);
+        $data = $request->all();
+        return view('dashboard', compact('data'));
+    }
 
     /**
      * Handle an incoming registration request.

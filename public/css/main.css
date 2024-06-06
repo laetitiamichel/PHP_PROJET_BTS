@@ -28,7 +28,6 @@ body{
     background-color: var(--color-form);
     color: var(--color-texte);
     margin-left: 0;
-    
     line-height: 5rem;
     border-radius: 1rem;
   }
@@ -68,17 +67,21 @@ body{
     border-radius: 1rem;
     text-align: center;
    }
-
-   .h2_accueil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
+  .navigationDashboard{
+    font-size: x-large;
+    text-transform: uppercase;
     padding: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-   }
-  
+  }
+  .bar_menu{
+    
+  }
+  :hover .navigationDashboard{
+    background-color: var(--bgcolor-bouton);
+    color: #0D0D0D;
+    font-size: x-large;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
    .p_accueil{
     display: flex;
     justify-content: center; 
@@ -121,13 +124,15 @@ body{
     align-items: center;
     
    }
+   
   .clic_inscription{
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    background-color: var(--color-form);
-    width: 50rem;
+    background-color: var(--bgcolor-P);
+    width: 40rem;
+    height: 5rem;
     line-height: 5rem;
     border-radius: 2rem;
     text-decoration: none;
@@ -140,8 +145,19 @@ body{
     margin: 3rem auto; /* Espacement entre les boutons */
     gap:2rem;
   }
+  .already_registered{
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    background-color: #AE6BF2;
+    color:#fff;
+    margin: 2rem;
+  }
   
-  /*  FORMULAIRE */
+  /*  FORMULAIRE INSCRIPTION*/
 
 input[type="text"],
 input[type="date"],  
@@ -170,6 +186,8 @@ input[type="submit"]{
 .inner-form_inscription form input{
     border-bottom: solid .3rem var(--bgcolor-bouton);
     background-color: aliceblue;
+    color:#0D0D0D;
+    font-size: large;
 }
 
 .inner-form_inscription form input[type="image"],
@@ -191,19 +209,75 @@ input[type="submit"]{
     margin-right: auto;
     cursor: pointer;
     width: 50%;
-    height: auto;
+    height: 10rem;
     color: black;
     text-transform: uppercase;
-    font-size: inherit;
     line-height: 5rem;
     border-radius: .4rem;
+    font-size: larger;
+ }
+
+ /* SE CONNECTER */
+ .login{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+ }
+ .remember_me{
+    display:flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    width: 30rem;
+    height: 3rem;
+    background-color: #AE6BF2;
+    color:#fff;
+    margin: 2rem;
+    border-radius: .4rem;
+ }
+ .remember_me_box{
+  height: 3rem;
+  margin: 1rem;
+ }
+ .forgot{
+  display:flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  color:#fff;
+  margin: 2rem;
+  font-size: small;
+ }
+
+ .log_in{
+  display: flex;
+  flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: var(--bgcolor-bouton);
+    width: 40rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+    font-style: inherit;
+    color: black;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 3rem auto; /* Espacement entre les boutons */
+    gap:2rem;
  }
 /* FICHE MEMBRE */
+
 .page_ficheAdmin{
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
-    width: 40%;
+    width: 60%;
     margin: 1rem auto;
     padding: 3rem;
     background-color: var(--bgcolor-H) ;
@@ -211,6 +285,11 @@ input[type="submit"]{
     border-radius: 1rem;
     text-align: center;
    }
+   .ficheMembre{
+    background-color: #fff;
+    width: 100%;
+    color: #AE6BF2;
+  }
    .h2_fiche{
       display: flex;
        justify-content: center; 
@@ -227,30 +306,21 @@ input[type="submit"]{
       font-size: 2.5rem;
       width: 100%;
      }
-  li{
-    margin: 3rem;
-    line-height: 5rem;
-    text-align: left;
-  }
+  
   h4{
     margin: 2rem;
   }
-  .fiche_membre{
-      display: flex;
-      justify-content: center; 
-      align-items: center;
-      padding: 1rem;
-  }
 
-  .photo_membre{
-      display: flex;
-      justify-content: center; 
-      align-items: center;   
-  }
-  img{
-    width: 15%;
-  
-  }
+.photo_membre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem;  
+    width: 40%; 
+    margin: 1rem auto;
+}
+
   
   /* BOUTON FICHE MEMBRE*/
   .page_membre{
@@ -319,7 +389,60 @@ input[type="submit"]{
     font-size: inherit;
   }
   
-  
+/*   CREER EVENT */
+.creer_event{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre horizontalement */
+  /* align-items: center; */ /* Centre verticalement */
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: var(--bgcolor-H) ;
+  color: var(--color-texte);
+  border-radius: 1rem;
+  gap: 0.2rem;
+  /* text-align: center; */
+}
+.validation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  background-color: var(--color-form);
+  padding: 1rem;
+  width: 30%;
+  border-radius: 1rem; 
+  text-align: center; 
+  text-transform: uppercase;  
+ }
+ .h2_accueil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: var(--bgcolor-P);
+  color:#fff;
+ }
+ li{
+  margin: 1rem;
+  line-height: 3rem;
+  text-align: left;
+}
+.photo_event{
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+}
+img{
+width: 15%;
+
+}
+
+/*  //////////////////////////// */
   footer{
     text-align: center; /* Centrer horizontalement */
     margin-top: 7rem; /* Marge supérieure pour plus d'espace */ 

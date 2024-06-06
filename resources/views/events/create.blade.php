@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h1>Créer un évènement</h1>
+                    <h1 class="h2_accueil">Créer un évènement</h1>
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -22,7 +22,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{action([\App\Http\Controllers\EventController::class, 'store'])}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{action([\App\Http\Controllers\EventController::class, 'store'])}}" method="POST" enctype="multipart/form-data" class="creer_event">
                        @csrf {{-- pour protéger le formulaire d'injection de code --}}
                        {{-- enctype="multipart/form-data" = à mettre absolument quand on met une image opur qu'elle s'affiche --}}
                         <label for="titre">Titre:</label>
@@ -31,9 +31,9 @@
                         <input type="text" name="description"  value={{ old('description')}}>
                         <label for="email">email:</label>
                         <input type="text" name="email" value={{ old('email')}}>
-                        <label for="cover">cover:</label>
+                        <label class="" for="cover">cover:</label>
                         <input type="file" name="cover">
-                        <button type="submit">Valider</button>
+                        <button class="validation" type="submit">Valider</button>
                     </from>
                 </div>
             </div>

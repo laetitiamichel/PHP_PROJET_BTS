@@ -26,7 +26,8 @@ Route::get('/dashboard', function () {
       ici pour afficher tous les users sur la page d'accueil */
     /* dd($users);  *//* =dead and dump = dd pour vérif que j'ai tout les users */    
     return view('dashboard', [
-        'users' => $users,       
+        'users' => $users,
+        'me' => auth()->user(),      
     ]); /* accueil site */
 })->middleware(['auth', 'verified'])->name('dashboard'); /* authentification user */
 
@@ -40,3 +41,5 @@ require __DIR__.'/auth.php';
 /* création de la route car création de la table event */
 Route::resource('events', \App\Http\Controllers\EventController::class);
 Route::resource('user', \App\Http\Controllers\ProfileController::class);
+
+

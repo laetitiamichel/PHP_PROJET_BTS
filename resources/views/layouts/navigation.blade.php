@@ -11,8 +11,8 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')">
+                <div class="navigationDashboard{{-- hidden space-x-8 sm:-my-px sm:ms-10 sm:flex --}}">
+                    <x-nav-link :href="route('accueil')" :active="request()->routeIs('accueil')" >
                         {{ __('Accueil') }}
                     </x-nav-link>
                     <x-nav-link :href="route('events.create')" :active="request()->routeIs('events.create')">
@@ -40,7 +40,7 @@
 
                     </x-slot>
 
-                    <x-slot name="content">
+                    <x-slot name="content" class="bar_menu">
                         <x-dropdown-link :href="route('profile.edit')">
                             Profil
                         </x-dropdown-link>

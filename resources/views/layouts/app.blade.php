@@ -15,7 +15,7 @@
         {{-- @vite => necessite NPM --}} 
 {{--pour inclure mon css => on retire vite et on rajoute un link avec lien vers dossier css href="/css..." --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
