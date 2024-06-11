@@ -12,12 +12,19 @@ class EventController extends Controller
      */
      public function index()
     {
-        return view('events.store'); 
+        return view('events.store'); /* comme un echo en php */
     } 
     
     public function all_events()
     {
-       
+        if (Auth::check()) {
+            // Utilisateur connecté, récupérer les événements qu'il a créés
+            $meEvent = Event::where('user_id', Auth::id())->orWhere('public', true)->get();
+        } else {
+            // Utilisateur non connecté, récupérer les événements publics
+            $events = Event::where('public', true)->get();
+        }
+
         return view('events.all_events');
     } 
     
@@ -41,6 +48,15 @@ class EventController extends Controller
             'email'=>'required|email',
             'cover'=>'required|image',
         ]);
+        /* $event = Event::create([
+            'nom' => $request->nom,
+            'description' => $request->description,
+            'email' => $request->email,
+            'cover' => $request->cover,
+        ]); */
+      /*  dd($request->all()); */
+ 
+       /* dd($request->all(), $request->nom,$request->description); */
         $nouvelEvent = new Event;
         $nouvelEvent->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
         $nouvelEvent->description = $request->description;
