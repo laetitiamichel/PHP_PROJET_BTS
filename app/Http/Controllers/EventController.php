@@ -10,23 +10,11 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      */
-   /*  public function index()
+     public function index()
     {
-        return view('events.store'); /* comme un echo en php 
-    } */
-    public function index(): View
-    {
-        return view('events.index');
-        return view('events.index', [
-            'events' => all_events::with('user')->latest()->get(),
-        ]);
-    }
-
-    /* public function index()
-    {
-        // Logique pour récupérer et afficher les événements
-        return view('events.all_events'); // Assurez-vous d'avoir une vue `events/index.blade.php`
-    } */
+        return view('events.store'); /* comme un echo en php */
+    } 
+    
     public function all_events()
     {
         if (Auth::check()) {
@@ -38,7 +26,7 @@ class EventController extends Controller
         }
 
         return view('events.all_events');
-    }
+    } 
          /* comme un echo en php */
     
 
@@ -112,4 +100,18 @@ class EventController extends Controller
     {
         //
     }
+
+    /* public function index(): View
+    {
+        return view('events.index');
+        return view('events.index', [
+            'events' => all_events::with('user')->latest()->get(),
+        ]);
+    } */
+
+    /* public function index()
+    {
+        // Logique pour récupérer et afficher les événements
+        return view('events.all_events'); // Assurez-vous d'avoir une vue `events/index.blade.php`
+    } */
 }

@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /* dans les () => arguments de get de la route welcome => chemin + fonction */
+
+/* ROUTEs EVENT: */
+
+/* Route event page d'accueil: */
 Route::get('/', function () {
     $events= App\Models\Event :: all();
     return view('index',[
@@ -21,14 +25,7 @@ Route::get('/', function () {
     ]);
 })->name('accueil');
 
-/* Route::get('/dasboard', function () {
-    $events= App\Models\Event :: all();
-    return view('events',[
-        'events' => $events,
-        'meEvent' => auth()->user(),
-    ]);
-})->middleware(['auth', 'verified'])->name('dashboard');; */
-
+/* route event dans le dashboard: */
 Route::get('/dasboard', function () {
    $events= App\Models\Event :: all();
     return view('dashboard',[
@@ -37,11 +34,10 @@ Route::get('/dasboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+/* route pour afficher tous les events: */
 Route::get('/events/all', [EventController::class, 'allEvents'])->name('events.all_events');
 
-
-
-
+/* ROUTE USER */
 Route::get('/dashboard', function () {
     $users = App\Models\User :: all();/* :: pour accéder à une méthode <statique>
       ici pour afficher tous les users sur la page d'accueil */
@@ -66,5 +62,11 @@ Route::resource('user', \App\Http\Controllers\ProfileController::class);
 /* Route::resource('events', ChirpController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']); */
-
+/* Route::get('/dasboard', function () {
+    $events= App\Models\Event :: all();
+    return view('events',[
+        'events' => $events,
+        'meEvent' => auth()->user(),
+    ]);
+})->middleware(['auth', 'verified'])->name('dashboard');; */
 
