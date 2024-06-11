@@ -18,9 +18,9 @@
                     <x-nav-link :href="route('events.create')" :active="request()->routeIs('events.create')">
                         {{ __('Créer un Evenement') }}
                     </x-nav-link>
-                   {{--  <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
+                 <x-nav-link :href="route('events.all_events')" :active="request()->routeIs('events.all_events')">
                         {{ __('Liste des évènements') }}
-                    </x-nav-link> --}}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -40,13 +40,13 @@
 
                     </x-slot>
 
-                    <x-slot name="content" class="bar_menu">
-                        <x-dropdown-link :href="route('profile.edit')">
+                    <x-slot name="content" >
+                        <x-dropdown-link :href="route('profile.edit')" class="bar_menu">
                             Profil
                         </x-dropdown-link>
 
                         <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="POST" action="{{ route('logout') }}" class="bar_menu">
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"

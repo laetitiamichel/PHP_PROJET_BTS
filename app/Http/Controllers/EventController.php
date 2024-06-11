@@ -10,10 +10,37 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+   /*  public function index()
     {
-        dd('index'); /* comme un echo en php */
+        return view('events.store'); /* comme un echo en php 
+    } */
+    public function index(): View
+    {
+        return view('events.index');
+        return view('events.index', [
+            'events' => all_events::with('user')->latest()->get(),
+        ]);
     }
+
+    /* public function index()
+    {
+        // Logique pour récupérer et afficher les événements
+        return view('events.all_events'); // Assurez-vous d'avoir une vue `events/index.blade.php`
+    } */
+    public function all_events()
+    {
+        if (Auth::check()) {
+            // Utilisateur connecté, récupérer les événements qu'il a créés
+            $meEvent = Event::where('user_id', Auth::id())->orWhere('public', true)->get();
+        } else {
+            // Utilisateur non connecté, récupérer les événements publics
+            $events = Event::where('public', true)->get();
+        }
+
+        return view('events.all_events');
+    }
+         /* comme un echo en php */
+    
 
     /**
      * Show the form for creating a new resource.
@@ -34,7 +61,12 @@ class EventController extends Controller
             'email'=>'required|email',
             'cover'=>'required|image',
         ]);
-
+        /* $event = Event::create([
+            'nom' => $request->nom,
+            'description' => $request->description,
+            'email' => $request->email,
+            'cover' => $request->cover,
+        ]); */
       /*  dd($request->all()); */
  
        /* dd($request->all(), $request->nom,$request->description); */

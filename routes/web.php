@@ -21,6 +21,27 @@ Route::get('/', function () {
     ]);
 })->name('accueil');
 
+/* Route::get('/dasboard', function () {
+    $events= App\Models\Event :: all();
+    return view('events',[
+        'events' => $events,
+        'meEvent' => auth()->user(),
+    ]);
+})->middleware(['auth', 'verified'])->name('dashboard');; */
+
+Route::get('/dasboard', function () {
+   $events= App\Models\Event :: all();
+    return view('dashboard',[
+        'events' => $events,
+        'meEvent' => auth()->user(),
+    ]);
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/events/all', [EventController::class, 'allEvents'])->name('events.all_events');
+
+
+
+
 Route::get('/dashboard', function () {
     $users = App\Models\User :: all();/* :: pour accéder à une méthode <statique>
       ici pour afficher tous les users sur la page d'accueil */
@@ -41,5 +62,9 @@ require __DIR__.'/auth.php';
 /* création de la route car création de la table event */
 Route::resource('events', \App\Http\Controllers\EventController::class);
 Route::resource('user', \App\Http\Controllers\ProfileController::class);
+
+/* Route::resource('events', ChirpController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']); */
 
 

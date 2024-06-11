@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Maison des Ligues</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -85,8 +85,9 @@
                     @if (Route::has('register'))
                     <a class="clic_inscription" href="{{ route('register') }}" target="blank">Cliquez pour vous inscrire</a>
                     @endif
+                    <a href="{{ route('events.all_events') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Evenements</a>
                 @endauth
-                    <a href="{{ route('events.create') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Evenements</a>
+                    
             </div>       
         @endif
     </div>

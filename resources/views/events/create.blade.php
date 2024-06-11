@@ -34,6 +34,7 @@
                         <label class="" for="cover">cover:</label>
                         <input type="file" name="cover">
                         <button class="validation" type="submit">Valider</button>
+                        {{ __('store') }}
                     </from>
                 </div>
             </div>

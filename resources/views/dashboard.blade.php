@@ -13,11 +13,6 @@
             <div class="page_ficheAdmin{{-- bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg --}}">
                 <div class="ficheMembre{{-- p-6 text-gray-900 dark:text-gray-100 --}}">
                     <h2 class="h2_fiche">Fiche Membre: {{Auth::user()->prenom}}</h2>
-                    {{-- <p>Nom: {{ $data['nom'] }}</p>
-                    <p>Prénom: {{ $data['prenom'] }}</p>
-                    <p>Email: {{ $data['email'] }}</p>
-                    <p>ville: {{ $data['ville'] }}</p> --}}
-                    {{-- ici code en blade donc @ devant if et foreach --}}
                     @auth
                         @if (Auth::user()->is_admin)
                             <ul>
@@ -39,6 +34,7 @@
                         @endif
                     @endauth
                     <div class="photo_membre">
+                        <img src="{{Storage::disk("public")->url($me->cover)}}" alt="photo du membre"></img>
                     <img class="img" src="https://www.gravatar.com/avatar/0.jpg?s=200&d=retro">
                     {{-- si je veux modif le css du p=> création d'un fichier css dans app + rajout d'une class --}}
                     </div>

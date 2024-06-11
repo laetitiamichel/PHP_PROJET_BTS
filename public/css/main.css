@@ -72,9 +72,10 @@ body{
     text-transform: uppercase;
     padding: 1rem;
   }
-  .bar_menu{
-    
-  }
+ .bar_menu{
+    color:#0D0D0D;
+    background-color: var(--bgcolor-P);
+  } 
   :hover .navigationDashboard{
     background-color: var(--bgcolor-bouton);
     color: #0D0D0D;
@@ -124,14 +125,22 @@ body{
     align-items: center;
     
    }
-   
+   .texte_photo{
+    color: #fff;
+   }
+   .validation_inscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   }
   .clic_inscription{
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    background-color: var(--bgcolor-P);
-    width: 40rem;
+    background-color: #F2A0ED!important;
+    width: 30rem;
     height: 5rem;
     line-height: 5rem;
     border-radius: 2rem;
@@ -139,7 +148,7 @@ body{
     text-align: center;
     font-size: larger;
     font-style: inherit;
-    color: black;
+    color: #fff!important;
     cursor: pointer;
     padding: 1rem;
     margin: 3rem auto; /* Espacement entre les boutons */
@@ -152,9 +161,12 @@ body{
     align-items: center;
     text-align: center;
     font-size: large;
+    height: 20%;
     background-color: #AE6BF2;
     color:#fff;
     margin: 2rem;
+    padding: 1rem;
+    font-style: italic;
   }
   
   /*  FORMULAIRE INSCRIPTION*/
@@ -327,6 +339,15 @@ input[type="submit"]{
     text-align: center;
     list-style: none;
   }
+  .photo_membre{
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+  }
+  img{
+  width: 15%;
+  }
+  
   .bouton_accueil{
       display: flex;
       justify-content: center; 
@@ -439,9 +460,14 @@ input[type="submit"]{
 }
 img{
 width: 15%;
-
 }
-
+.event_enregistre{
+  color: #fff;
+  background-color: var(--bgcolor-bouton);
+  font-size: xx-large;
+  text-align: center;
+  padding: 3rem;
+}
 /*  //////////////////////////// */
   footer{
     text-align: center; /* Centrer horizontalement */
