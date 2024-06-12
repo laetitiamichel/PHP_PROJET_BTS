@@ -37,11 +37,11 @@ Route::get('/dasboard', function () {
 /* route pour afficher tous les events: */
 Route::get('/events/all', function(){
     $events= App\Models\Event :: all();
-    return view('all_events',[
-       /*  'events' => $events,
-        'meEvent' => auth()->user(), */
+    return view('events.all_events',[
+        'events' => $events,
+        'meEvent' => auth()->user(),
     ]);
-})->middleware(['auth', 'verified'])->name('all_events');
+})->middleware(['auth', 'verified'])->name('events.all_events');
 
 /* [\App\Http\Controllers\EventController::class, 'all_events'])->name('events.all_events'); */
 
