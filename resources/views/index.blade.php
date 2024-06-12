@@ -36,13 +36,15 @@
                 {{-- l'affichage si je suis loggué --}}
                 @auth
                     <a href="{{ url('/dashboard') }}" class="menu_nav_bar_a">Dashboard</a>
+                    <a href="{{ route('events.all_events') }}" class="menu_nav_bar_a">Evenements</a>
                 @else      
                     <a href="{{ route('login') }}" class="menu_nav_bar_a">Connexion</a>
                     @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="menu_nav_bar_a">S'enregistrer</a>
                     @endif
+                    
                 @endauth
-                    <a href="{{ route('events.all_events') }}" class="menu_nav_bar_a">Evenements</a>
+                    
             </div>       
         @endif
     </nav>
@@ -58,10 +60,10 @@
         @foreach( $events as $event)
                 <li class="img_accueil">
                     <h3>{{$event->name}}</h3>
-                    <h3>{{$event->description}}</h3>
+                    {{-- <h3>{{$event->description}}</h3> --}}
                     {{-- storage=class qui gère les dossiers images puis va dans le dossier public
                         puis émet une url en fonction de l'image chargée--}}
-                    <img src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
+                    <img class="photo_event_accueil" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
                 </li>
             @endforeach
     </ul>

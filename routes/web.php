@@ -30,7 +30,7 @@ Route::get('/dasboard', function () {
    $events= App\Models\Event :: all();
     return view('dashboard',[
         'events' => $events,
-        'meEvent' => auth()->user(),
+        'meEvent' => auth()->events(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -49,7 +49,7 @@ Route::get('/events/all', function(){
 Route::get('/dashboard', function () {
     $users = App\Models\User :: all();/* :: pour accéder à une méthode <statique>
       ici pour afficher tous les users sur la page d'accueil */
-    /* dd($users);  *//* =dead and dump = dd pour vérif que j'ai tout les users */    
+    /* dd($users);  *//* =dead and dump = dd pour vérif que j'ai tous les users */    
     return view('dashboard', [
         'users' => $users,
         'me' => auth()->user(),      
