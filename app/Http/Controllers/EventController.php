@@ -15,11 +15,11 @@ class EventController extends Controller
         return view('events.store'); /* comme un echo en php */
     } 
     
-   /*  public function all_events()
+   public function all_events()
     {
         return view('events.all_events');
     } 
-     */
+    
 
     /**
      * Show the form for creating a new resource.

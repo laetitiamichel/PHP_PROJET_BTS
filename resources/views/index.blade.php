@@ -45,17 +45,6 @@
     <h2 class="h2_accueil" id="accueil">
         Prêt(e) à la compétition ? </br>Cliquez sur le bouton pour commencer
     </h2>
-    
-    <div class="show_events">
-        <ul>
-            @foreach( $events as $event)
-                <li>
-                    <div>{{$event->name}}</div>
-                    <div>{{$event->description}}</div>
-                   {{--  <div>{{$event->image}}</div> --}}
-                </li>
-            @endforeach
-        </ul>
     </div>
     <p class="p_accueil">
         Tous les mois profitez de toutes les nouveautés et opportunités.
