@@ -38,7 +38,7 @@
                     <a href="{{ route('register') }}" class="menu_nav_bar_a">S'enregistrer</a>
                     @endif
                 @endauth
-                    <a href="{{ route('events.create') }}" class="menu_nav_bar_a">Evenements</a>
+                    <a href="{{ route('events.all_events') }}" class="menu_nav_bar_a">Evenements</a>
             </div>       
         @endif
     </nav>
