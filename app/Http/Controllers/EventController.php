@@ -15,19 +15,11 @@ class EventController extends Controller
         return view('events.store'); /* comme un echo en php */
     } 
     
-    public function all_events()
+   /*  public function all_events()
     {
-        if (Auth::check()) {
-            // Utilisateur connecté, récupérer les événements qu'il a créés
-            $meEvent = Event::where('user_id', Auth::id())->orWhere('public', true)->get();
-        } else {
-            // Utilisateur non connecté, récupérer les événements publics
-            $events = Event::where('public', true)->get();
-        }
-
         return view('events.all_events');
     } 
-    
+     */
 
     /**
      * Show the form for creating a new resource.

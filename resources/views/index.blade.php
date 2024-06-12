@@ -85,7 +85,7 @@
                     @if (Route::has('register'))
                     <a class="clic_inscription" href="{{ route('register') }}" target="blank">Cliquez pour vous inscrire</a>
                     @endif
-                    <a href="{{ route('events.all_events') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Evenements</a>
+                   {{--  <a href="{{ route('events.all_events') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Evenements</a> --}}
                 @endauth
                     
             </div>       

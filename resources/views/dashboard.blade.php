@@ -33,11 +33,11 @@
                         {{-- <p class="connection">Bonjour, connectez-vous!</p>  --}}
                         @endif
                     @endauth
-                    <div class="photo_membre">
+                   {{--  <div class="photo_membre">
                         <img src="{{Storage::disk("public")->url($me->cover)}}" alt="photo du membre"></img>
                     <img class="img" src="https://www.gravatar.com/avatar/0.jpg?s=200&d=retro">
-                    {{-- si je veux modif le css du p=> création d'un fichier css dans app + rajout d'une class --}}
-                    </div>
+                    {{-- si je veux modif le css du p=> création d'un fichier css dans app + rajout d'une class
+                    </div> --}}
                     {{ __("vous êtes connecté!") }}
                 </div>
                 

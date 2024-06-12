@@ -29,12 +29,12 @@
                         <input type="text" name="nom" value={{ old('nom')}}>
                         <label for="description">Description:</label>
                         <input type="text" name="description"  value={{ old('description')}}>
-                        <label for="email">email:</label>
+                        <label for="email">Email:</label>
                         <input type="text" name="email" value={{ old('email')}}>
-                        <label class="" for="cover">cover:</label>
+                        <label class="" for="cover">Photo de l'évènement:</label>
                         <input type="file" name="cover">
                         <button class="validation" type="submit">Valider</button>
-                        {{ __('store') }}
+                        {{-- {{ __('store') }} --}}
                     </from>
                 </div>
             </div>

@@ -38,8 +38,8 @@ Route::get('/dasboard', function () {
 Route::get('/events/all', function(){
     $events= App\Models\Event :: all();
     return view('all_events',[
-        'events' => $events,
-        'meEvent' => auth()->user(),
+       /*  'events' => $events,
+        'meEvent' => auth()->user(), */
     ]);
 })->middleware(['auth', 'verified'])->name('all_events');
 
