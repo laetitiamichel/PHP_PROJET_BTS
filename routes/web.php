@@ -30,7 +30,7 @@ Route::get('/dasboard', function () {
    $events= App\Models\Event :: all();
     return view('dashboard',[
         'events' => $events,
-        'meEvent' => auth()->events(),
+        'meEvent' => auth()->user(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 

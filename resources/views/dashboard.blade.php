@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="page_ficheAdmin{{-- bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg --}}">
                 <div class="ficheMembre{{-- p-6 text-gray-900 dark:text-gray-100 --}}">
-                    <h2 class="h2_fiche">Fiche Membre:{{Auth::user()->prenom}}</h2>
+                    <h2 class="h2_fiche">Fiche Membre: {{Auth::user()->prenom}}</h2>
                     @auth
                         @if (Auth::user()->is_admin)
                             <ul>

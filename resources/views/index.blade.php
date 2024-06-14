@@ -14,10 +14,8 @@
         <link rel="stylesheet" href="/css/main.css">
 
         <!-- Styles -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+        <link  rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+        <link rel="manifest" href="/assets/favicon/site.webmanifest">
     </head>
 <body class="antialiased">
     <div class="ligne_rose"></div>
@@ -59,8 +57,8 @@
     <ul class="display_grid">
         @foreach( $events as $event)
                 <li class="img_accueil">
-                    <h3>{{$event->name}}</h3>
-                    {{-- <h3>{{$event->description}}</h3> --}}
+                    <h3 class="h3_events">{{$event->nom}}</h3>
+                    <h3 class="h3_events_d">{{$event->description}}</h3>
                     {{-- storage=class qui gère les dossiers images puis va dans le dossier public
                         puis émet une url en fonction de l'image chargée--}}
                     <img class="photo_event_accueil" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>

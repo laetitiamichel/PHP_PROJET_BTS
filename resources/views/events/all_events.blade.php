@@ -12,14 +12,18 @@
                     <h1 class="h1_all_events">Afficher Mes évènements</h1>
                     <div class="show_event">
                         @auth
-                        <ul>        
-                            @foreach( $events as $meEvent)
-                                    <li class="all_events_list"> Nom: {{$meEvent->nom}}</li>
-                                    <li class="all_events_description"> Description: {{$meEvent->description}}</li>
-                                    {{-- storage=class qui gère les dossiers images puis va dans le dossier public
-                                        puis émet une url en fonction de l'image chargée--}} 
-                                    <img class="photo_event_all" src="{{Storage::disk("public")->url($meEvent->image)}}" alt="image de l'évènement"></img>
-                            @endforeach
+                           {{--  @if($events->isEmpty())
+                                <p>No events found.</p>
+                            @else --}}
+                        <ul>     
+                                @foreach( $events as $event)
+                                        <li class="all_events_list"> Nom: {{$event->nom}}</li>
+                                        <li class="all_events_description"> Description: {{$event->description}}</li>
+                                        {{-- storage=class qui gère les dossiers images puis va dans le dossier public
+                                            puis émet une url en fonction de l'image chargée--}} 
+                                        <img class="photo_event_all" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
+                                @endforeach
+                            {{-- @endif --}}
                         </ul>
                         {{-- <x-primary-button class="mt-4">{{ __('events') }}</x-primary-button> --}}
                         @endauth

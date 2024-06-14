@@ -17,7 +17,12 @@ class EventController extends Controller
     
    public function all_events()
     {
-        return view('events.all_events');
+        // Récupérer l'utilisateur connecté
+        /* $user = Auth::user(); */
+
+        // Récupérer les événements créés par l'utilisateur connecté
+        /* $events = $user->events; */
+        return view('events.all_events'/* , compact('events') */);
     } 
     
 
@@ -39,25 +44,25 @@ class EventController extends Controller
             'description'=>'required|string',
             'email'=>'required|email',
             'cover'=>'required|image',
+            /* 'user_id'=>'required|int', */
         ]);
-        /* $event = Event::create([
-            'nom' => $request->nom,
-            'description' => $request->description,
-            'email' => $request->email,
-            'cover' => $request->cover,
-        ]); */
-      /*  dd($request->all()); */
- 
-       /* dd($request->all(), $request->nom,$request->description); */
-        $nouvelEvent = new Event;
-        $nouvelEvent->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
-        $nouvelEvent->description = $request->description;
-       /*  stock l'image dans le dossier public/images */
-        $nouvelEvent->image = $request->cover->store('images', 'public');
-        /* méthode save de la class model */
-        $nouvelEvent->save();
 
-        return view('events.store');
+       /*  $event = new Event([
+            'nom' => $request->input('nom'),
+            'description' => $request->input('description'),
+            'cover' => $request->input('cover', false),
+            /* 'user_id' => $userId, 
+        ]); */
+            
+             /* dd($request->all(), $request->nom,$request->description); */
+             $nouvelEvent = new Event;
+             $nouvelEvent->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
+             $nouvelEvent->description = $request->description;
+            /*  stock l'image dans le dossier public/images */
+             $nouvelEvent->image = $request->cover->store('images', 'public');
+             /* méthode save de la class model */
+             $nouvelEvent->save();
+             return view('events.store');
     }
 
     /**
