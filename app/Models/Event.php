@@ -12,8 +12,8 @@ class Event extends Model
    /*  protected $fillable = ['nom', 'description', 'user_id', 'image']; */
 
     // Définir la relation avec User
-   /*  public function user()
+   public function user()
     {
         return $this->belongsTo(User::class);
-    } */
+    }
 }

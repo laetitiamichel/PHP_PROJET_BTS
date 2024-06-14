@@ -15,16 +15,24 @@
                            {{--  @if($events->isEmpty())
                                 <p>No events found.</p>
                             @else --}}
-                        <ul>     
+                        <ul class="display_grid">     
                                 @foreach( $events as $event)
-                                        <li class="all_events_list"> Nom: {{$event->nom}}</li>
-                                        <li class="all_events_description"> Description: {{$event->description}}</li>
+                                        <li class="img_accueil"> 
+                                            <h3 class="h3_events">{{$event->nom}}</h3>
+                                            <h3 class="h3_events_d">{{$event->description}}</h3>
                                         {{-- storage=class qui gère les dossiers images puis va dans le dossier public
                                             puis émet une url en fonction de l'image chargée--}} 
-                                        <img class="photo_event_all" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
+                                            <img class="photo_event_accueil" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
+                                            @if (Auth::user()->is_admin)
+                                            <a class="clic_modif" href="{{ route('events.edit',$event) }}" target="blank">Modifier</a>
+                                            @endif
+                                        </li>
+                                    
+                                    
                                 @endforeach
-                            {{-- @endif --}}
                         </ul>
+                            {{-- @endif --}}
+                        
                         {{-- <x-primary-button class="mt-4">{{ __('events') }}</x-primary-button> --}}
                         @endauth
                     </div>

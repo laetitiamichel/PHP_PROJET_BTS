@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Event;
 use Illuminate\Http\Request;
 
@@ -17,6 +16,21 @@ class EventController extends Controller
     
    public function all_events()
     {
+        if(auth()->user()->is_admin){
+           /*  pour afficher tous les events si admin */
+            $events = Event::all();
+        }
+        else{
+             //appel à la relation one to many de event=> foreign key user_id de id table users
+            $events= auth()->user()->events;
+        }
+      
+        /* dd($events); */
+        return view('events.all_events',[
+            'events' => $events,
+        ]);
+
+
         // Récupérer l'utilisateur connecté
         /* $user = Auth::user(); */
 
@@ -47,13 +61,6 @@ class EventController extends Controller
             /* 'user_id'=>'required|int', */
         ]);
 
-       /*  $event = new Event([
-            'nom' => $request->input('nom'),
-            'description' => $request->input('description'),
-            'cover' => $request->input('cover', false),
-            /* 'user_id' => $userId, 
-        ]); */
-            
              /* dd($request->all(), $request->nom,$request->description); */
              $nouvelEvent = new Event;
              $nouvelEvent->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
@@ -78,7 +85,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('events.edit',["event"=>$event]); /* ici on récupère la vue du dossier event */
     }
 
     /**
@@ -86,7 +93,24 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        /* dd($request->all()); */
+        $request->validate([
+            'nom'=>'required|string',
+            'description'=>'required|string',
+            'cover'=>'image',
+        ]);
+
+             /* dd($request->all(), $request->nom,$request->description); */
+            $event->nom = $request->nom; /* ici on injecte l'info du formulaire dans la BDD */
+            $event->description = $request->description;
+            /*  vérif si image est uploade */
+            if ($request->hasfile('cover')){
+                $event->image = $request->cover->store('images', 'public');
+            }   
+             /* méthode save de la class model */
+            $event->save();
+
+            return redirect()->route('events.all_events');
     }
 
     /**

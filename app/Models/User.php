@@ -47,9 +47,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // Définir la relation avec Event
-    /* public function events()
+    // Définir la relation avec Event pour appeler le sys_id de user dans events
+    public function events()
     {
         return $this->hasMany(Event::class);
-    } */
+    }
 }

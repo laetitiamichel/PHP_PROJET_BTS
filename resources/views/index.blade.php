@@ -33,7 +33,7 @@
             <div class="menu_nav_bar">
                 {{-- l'affichage si je suis loggué --}}
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="menu_nav_bar_a">Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="menu_nav_bar_a">Membres</a>
                     <a href="{{ route('events.all_events') }}" class="menu_nav_bar_a">Evenements</a>
                 @else      
                     <a href="{{ route('login') }}" class="menu_nav_bar_a">Connexion</a>
