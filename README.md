@@ -1,7 +1,7 @@
-Application MVC réalisée avec le framework laravel.
-Application de sport où vous pouvez vous inscrire, créer un compte, publier des évènements.
-**Administrateur:  julie.audoux@gmail.com / mdp: julieaudoux**
-L'administrateur pour modifier ou supprimer un évènement.
+* Application MVC réalisée avec le framework laravel.
+* Application de sport où vous pouvez vous inscrire, créer un compte, publier des évènements.
+* **Administrateur:  julie.audoux@gmail.com / mdp: julieaudoux**
+* L'administrateur pour modifier ou supprimer un évènement.
 
 [lien du site](https://laetitiamichel.github.io/PHP_PROJET_BTS/)
 ---
