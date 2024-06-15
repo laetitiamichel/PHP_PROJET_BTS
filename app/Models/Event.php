@@ -9,7 +9,7 @@ class Event extends Model
 {
     use HasFactory;
 
-   /*  protected $fillable = ['nom', 'description', 'user_id', 'image']; */
+   protected $fillable = ['nom', 'description', 'user_id', 'image'];
 
     // Définir la relation avec User
    public function user()

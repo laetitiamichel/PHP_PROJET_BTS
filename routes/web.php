@@ -34,7 +34,14 @@ Route::get('/dasboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
+/* route pour afficher tous les events: */
+Route::get('/events/all', [\App\Http\Controllers\EventController::class, 'all_events'])
+     ->middleware(['auth', 'verified'])
+     ->name('events.all_events');
+     
+/* création de la route car création de la table event */
+Route::resource('events', \App\Http\Controllers\EventController::class);
+Route::resource('user', \App\Http\Controllers\ProfileController::class);
 
 /* ROUTE USER */
 Route::get('/dashboard', function () {
@@ -55,17 +62,12 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-/* route pour afficher tous les events: */
-Route::get('/events/all', [\App\Http\Controllers\EventController::class, 'all_events'])
-     ->middleware(['auth', 'verified'])
-     ->name('events.all_events');
+
 
 
  
 /* [\App\Http\Controllers\EventController::class, 'all_events'])->name('events.all_events'); */
-/* création de la route car création de la table event */
-Route::resource('events', \App\Http\Controllers\EventController::class);
-Route::resource('user', \App\Http\Controllers\ProfileController::class);
+
 
 /* Route::resource('events', ChirpController::class)
     ->only(['index', 'store'])

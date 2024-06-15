@@ -12,9 +12,6 @@
                     <h1 class="h1_all_events">Afficher Mes évènements</h1>
                     <div class="show_event">
                         @auth
-                           {{--  @if($events->isEmpty())
-                                <p>No events found.</p>
-                            @else --}}
                         <ul class="display_grid">     
                                 @foreach( $events as $event)
                                         <li class="img_accueil"> 
@@ -39,7 +36,7 @@
                                         </li>   
                                 @endforeach
                         </ul>
-                            {{-- @endif --}}
+        
                         
                         {{-- <x-primary-button class="mt-4">{{ __('events') }}</x-primary-button> --}}
                         @endauth

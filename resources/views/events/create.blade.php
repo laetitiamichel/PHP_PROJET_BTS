@@ -13,6 +13,9 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h1 class="h2_accueil">Créer un évènement</h1>
+                    @auth
+                        
+                    
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -37,6 +40,7 @@
                         {{-- {{ __('store') }} --}}
                     </from>
                 </div>
+                @endauth
             </div>
         </div>
     </div>

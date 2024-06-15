@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; 
 
 class EventController extends Controller
 {
@@ -11,11 +12,13 @@ class EventController extends Controller
      */
      public function index()
     {
-        return view('events.store'); /* comme un echo en php */
+        return view('events.all_events');
+        /* return view('events.store'); */ /* comme un echo en php */
     } 
     
    public function all_events()
     {
+        
         if(auth()->user()->is_admin){
            /*  pour afficher tous les events si admin */
             $events = Event::all();
@@ -25,7 +28,7 @@ class EventController extends Controller
             $events= auth()->user()->events;
         }
       
-        /* dd($events); */
+        //dd($events); 
         return view('events.all_events',[
             'events' => $events,
         ]);
@@ -36,7 +39,7 @@ class EventController extends Controller
 
         // Récupérer les événements créés par l'utilisateur connecté
         /* $events = $user->events; */
-        return view('events.all_events'/* , compact('events') */);
+       /*  return view('events.all_events'/* , compact('events') ); */
     } 
     
 
@@ -58,7 +61,7 @@ class EventController extends Controller
             'description'=>'required|string',
             'email'=>'required|email',
             'cover'=>'required|image',
-            /* 'user_id'=>'required|int', */
+            'user_id'=>'int',
         ]);
 
              /* dd($request->all(), $request->nom,$request->description); */
@@ -68,6 +71,7 @@ class EventController extends Controller
             /*  stock l'image dans le dossier public/images */
              $nouvelEvent->image = $request->cover->store('images', 'public');
              /* méthode save de la class model */
+             $nouvelEvent->user_id = Auth::id();
              $nouvelEvent->save();
              return view('events.store');
     }
