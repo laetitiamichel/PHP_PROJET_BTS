@@ -1,5 +1,5 @@
 ==================================================
-**PROJET BTS = BRANCHE LARAVEL**
+**PROJET BTS =>> BRANCHE LARAVEL**
 ==================================================
 LE PROJET FINAL SE SITUE DANS LA BRANCHE LARAVEL
 ==================================================
