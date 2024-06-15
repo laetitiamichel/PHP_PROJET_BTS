@@ -1,3 +1,8 @@
+Application MVC réalisée avec le framework laravel.
+Application de sport où vous pouvez vous inscrire, créer un compte, publier des évènements.
+**Administrateur:  julie.audoux@gmail.com / mdp: julieaudoux**
+L'administrateur pour modifier ou supprimer un évènement.
+
 [lien du site](https://laetitiamichel.github.io/PHP_PROJET_BTS/)
 ---
 # MAQUETTE GRAPHIQUE:
@@ -21,7 +26,7 @@ PUBLIER, 11 EVENEMENT, 0N CLIENTS
 
 EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
 ```
-![mocodo](./public/assetsMCD_LIGUES.png)
+![mocodo](./public/assets/MCD_LIGUES.png)
 
 # Arbre euristique:
-![arbre](./public/assetsarbre_projet_web.png)
+![arbre](./public/assets/arbre_projet_web.png)
