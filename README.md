@@ -2,9 +2,9 @@
 ---
 # MAQUETTE GRAPHIQUE:
 
-![Colorimétrie](./asset/Colorimetrie.png)
+![Colorimétrie](./public/assets/Colorimetrie.png)
 ## Création du logo:
-![logo_jo](./asset/logo_jo.png)
+![logo_jo](./public/assets/logo_jo.png)
 ## Création des formulaires:
 ![Maquette](https://hackmd.io/_uploads/ByGvxh4p6.png)
 ![Maquette_formulaire](https://hackmd.io/_uploads/SymGZ3NpT.png)
