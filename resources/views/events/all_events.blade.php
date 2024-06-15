@@ -25,6 +25,12 @@
                                             <img class="photo_event_accueil" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
                                             @if (Auth::user()->is_admin)
                                             <a class="clic_modif" href="{{ route('events.edit',$event) }}" target="blank">Modifier</a>
+                                            <form action="{{ route('events.destroy',$event) }}" 
+                                                  method="POST">
+                                                  @csrf
+                                                  @method('delete')
+                                                    <button class="validation" type="submit">Supprimer</button>
+                                            </from>
                                             @endif
                                         </li>
                                     

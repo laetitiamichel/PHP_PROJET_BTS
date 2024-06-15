@@ -118,7 +118,8 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect()->route('events.all_events');
     }
 
     /* public function index(): View
