@@ -20,21 +20,23 @@
                                         <li class="img_accueil"> 
                                             <h3 class="h3_events">{{$event->nom}}</h3>
                                             <h3 class="h3_events_d">{{$event->description}}</h3>
+                                        
                                         {{-- storage=class qui gère les dossiers images puis va dans le dossier public
                                             puis émet une url en fonction de l'image chargée--}} 
                                             <img class="photo_event_accueil" src="{{Storage::disk("public")->url($event->image)}}" alt="image de l'évènement"></img>
+                                        
                                             @if (Auth::user()->is_admin)
-                                            <a class="clic_modif" href="{{ route('events.edit',$event) }}" target="blank">Modifier</a>
-                                            <form action="{{ route('events.destroy',$event) }}" 
-                                                  method="POST">
-                                                  @csrf
-                                                  @method('delete')
-                                                    <button class="validation" type="submit">Supprimer</button>
-                                            </from>
+                                            <div class="bouton_admin">
+                                                <a class="clic_modif" href="{{ route('events.edit',$event) }}" target="blank">Modifier</a>
+                                                <form action="{{ route('events.destroy',$event) }}" 
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('delete')
+                                                        <button class="clic_modif" type="submit">Supprimer</button>
+                                                </from>
+                                            </div>
                                             @endif
-                                        </li>
-                                    
-                                    
+                                        </li>   
                                 @endforeach
                         </ul>
                             {{-- @endif --}}

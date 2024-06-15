@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/main.css">
 
-        <!-- Styles -->
+        {{-- FAVICONE --}}
         <link  rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <link rel="manifest" href="/assets/favicon/site.webmanifest">
     </head>

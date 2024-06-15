@@ -13,6 +13,8 @@ body{
     background-color: var(--color-bg);
     color: var(--color-texte);   
    }
+
+   /* LIGNES COULEURS THEME */
   .ligne_rose{
     background-color: var(--color-form);
     width: 0.5rem;
@@ -20,37 +22,6 @@ body{
     position: fixed;
     margin-left: 2rem;
     margin-top: 0;
-  }
-  .nav_bar{
-    width: 13%;
-    height: 18%;
-    position: fixed;
-    z-index: 100;
-    background-color: var(--color-form);
-    color: var(--color-texte);
-    margin-left: 0;
-    line-height: 5rem;
-    border-radius: 1rem;
-  }
-
-  .menu_nav_bar_a{
-   /*  display: block; */
-    padding: 1rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: larger;
-    font-style: inherit;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  }
-.menu_nav_bar_a:hover {
-    background-color: #fff;
-    transform: scale(1.05);
-    font-weight: bold;
-    width: 100%;
   }
   .ligne_verte{
     background-color: var(--bgcolor-bouton);
@@ -72,6 +43,53 @@ body{
     border-radius: 1rem;
     text-align: center;
    }
+/*   MENU ROSE GAUCHE */
+  .nav_bar{
+    width: 13%;
+    height: 18%;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--color-form);
+    color: var(--color-texte);
+    margin-left: 0;
+    line-height: 5rem;
+    border-radius: 1rem;
+  }
+
+  .menu_nav_bar_a{
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+    font-style: inherit;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  .menu_nav_bar_a:hover {
+      background-color: #fff;
+      transform: scale(1.05);
+      font-weight: bold;
+      width: 100%;
+    }
+
+    /* ENCADRE 2E ACCUEIL */
+    .p_accueil{
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      width: 70%;
+      margin: 1rem auto;
+      padding: 5rem;
+      background-color: #AE6BF2;
+      border-radius: 1rem;
+      text-align: center;
+      line-height: 3rem;
+     }
+
+    /*  HEADER DASHBOARD +>NAVIGATION DASHBOARD*/
   .navigationDashboard{
     font-size: x-large;
     text-transform: uppercase;
@@ -91,109 +109,85 @@ body{
   }
 
 
-   .p_accueil{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 70%;
-    margin: 1rem auto;
-    padding: 5rem;
-    background-color: #AE6BF2;
-    border-radius: 1rem;
-    text-align: center;
-    line-height: 3rem;
-   }
-  
-   .display_grid{
+ /*  AFFICHAGE DES EVENTS ACCUEIL  */
+   .display_grid {
     display: grid;
     width: 80%;
     height: 100%;
-    margin: 0 auto;
+    margin: 2rem auto;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     list-style: none;
     background-color: #3E3E40;
-    border-radius: 1rem;
+    border-radius: 1rem; 
+   
      }
- .clic_modif{
-  justify-content: center; 
-  align-items: center;
-  background-color: #AE6BF2;
-  color: #fff;
-  border-radius: 2rem;
-  text-decoration: none;
-  text-align: center;
-  font-size: larger;
-  font-weight: bold;
-  cursor: pointer;
-  width: 20%;
-  height: 10%;
-  line-height: 5rem;
- }
-  li.img_accueil{
-    height: 70%;
-    gap:0;
-  }
-   .img_accueil img{
-   /*  display: inline-block; */
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    /* vertical-align: middle; */
-    }
-  
-    .h3_events{
-      padding: 2rem;
+     /* TITRE EVENT */
+     .h3_events{
       background-color: var(--bgcolor-bouton);
       color:black!important;
       text-align: center;
       text-transform: uppercase;
-      height: 5rem;
+      margin-top: 2rem;
+     
     }
+   /*  DESCRIPTION EVENT */
     .h3_events_d{
       font-style: italic;
       background-color: #0D0D0D;
       color: #fff;
       text-align: center;
     }
-  
-   .bouton_inscription{
+    /* IMAGE EVENT */
+     li.img_accueil{
+      height: 70%;
+      gap:0;
+    }
+     .img_accueil img{
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      }
+     
+      /* BOUTON INSCRIPTION/CONNEXION ACCUEIL */
+      .bouton_inscription{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+       }
+      .clic_inscription{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        background-color: #F2A0ED!important;
+        width: 30rem;
+        height: 5rem;
+        line-height: 5rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        text-align: center;
+        font-size: larger;
+        font-weight: bold;
+        color: #fff!important;
+        cursor: pointer;
+        padding: 1rem;
+        margin: 3rem auto; /* Espacement entre les boutons */
+        gap:2rem;
+      }
+
+
+   
+  /*  FORMULAIRE INSCRIPTION*/
+  /* BOUTON VALIDER INSCRIPTION */
+  .validation_inscription{
     display: flex;
     flex-direction: column;
-    justify-content: center; 
     align-items: center;
-    
    }
-   .texte_photo{
-    color: #fff;
-   }
-   .validation_inscription{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-   }
-  .clic_inscription{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    background-color: #F2A0ED!important;
-    width: 30rem;
-    height: 5rem;
-    line-height: 5rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: larger;
-    font-weight: bold;
-    color: #fff!important;
-    cursor: pointer;
-    padding: 1rem;
-    margin: 3rem auto; /* Espacement entre les boutons */
-    gap:2rem;
-  }
-  .already_registered{
+   /* BOUTON DEJA ENREGISTRE */
+   .already_registered{
     display:flex;
     flex-direction: column;
     justify-content: center; 
@@ -207,9 +201,8 @@ body{
     padding: 1rem;
     font-style: italic;
   }
-  
-  /*  FORMULAIRE INSCRIPTION*/
 
+  /* FORMULAIRE INSCRIPTION MEMBRE */
 input[type="text"],
 input[type="date"],  
 input[type="search"],
@@ -222,7 +215,7 @@ input[type="submit"]{
 
 .inner-form_inscription{
     width: 40%;
-    /* margin: 5rem auto 2rem; */
+    margin: 5rem auto 2rem; 
     border-radius: 1rem;  
 }
 .label{
@@ -268,30 +261,32 @@ input[type="submit"]{
     font-size: larger;
  }
 
- /* SE CONNECTER */
+ /* SE CONNECTER => LOGIN.BLADE */
  .login{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
  }
+ /* BOX REMEMBER ME */
  .remember_me{
     display:flex;
     flex-direction: row;
     justify-content: center; 
     align-items: center;
     text-align: center;
-    font-size: medium;
+    font-size: large;
     width: 30rem;
     height: 3rem;
     background-color: #AE6BF2;
     color:#fff;
-    margin: 2rem;
+    margin: 2rem auto;
     border-radius: .4rem;
  }
  .remember_me_box{
   height: 3rem;
   margin: 1rem;
  }
+/*  MOT DE PASSE OUBLIE => LOGIN.BLADE */
  .forgot{
   display:flex;
   flex-direction: column;
@@ -299,31 +294,31 @@ input[type="submit"]{
   align-items: center;
   color:#fff;
   margin: 2rem;
-  font-size: small;
+  font-size: medium;
  }
-
+/* SE CONNECTER */
  .log_in{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
-    background-color: var(--bgcolor-bouton);
-    width: 40rem;
+    background-color: #85F2DE!important;
+    width: 60%;
     height: 5rem;
     line-height: 5rem;
     border-radius: 2rem;
     text-decoration: none;
     text-align: center;
     font-size: larger;
-    font-style: inherit;
-    color: black;
+    font-weight: bolder;
     cursor: pointer;
     padding: 1rem;
     margin: 3rem auto; /* Espacement entre les boutons */
     gap:2rem;
  }
-/* FICHE MEMBRE */
 
+
+/* FICHE MEMBRE PAGE=> DASHBOARD */
 .page_ficheAdmin{
     display: flex;
     justify-content: center; /* Centre horizontalement */
@@ -331,8 +326,8 @@ input[type="submit"]{
     width: 60%;
     margin: 1rem auto;
     padding: 3rem;
-    background-color: var(--bgcolor-H) ;
-    color: var(--color-texte);
+    background-color:#3E3E40 ;
+    color: #fff;
     border-radius: 1rem;
     text-align: center;
    }
@@ -348,43 +343,28 @@ input[type="submit"]{
       padding: 1rem;
       font-size: 1.5rem;
      }
-     .h3_fiche{
-      display: flex;
-      justify-content: center; 
-      align-items: center;
-      margin: 3rem;
-      padding: 1rem;
-      font-size: 2.5rem;
-      width: 100%;
+     .ul_fiche_membre{
+      background-color: #3E3E40;
+      padding: 2rem;
+      font-weight: bold;
      }
-  
-  h4{
-    margin: 2rem;
-  }
+    
 
-.photo_membre{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    padding: 1rem;  
-    width: 40%; 
-    margin: 1rem auto;
-}
+      /* .photo_membre{
+          display: flex;
+          flex-direction: column;
+          justify-content: center; 
+          align-items: center;
+          padding: 1rem;  
+          width: 40%; 
+          margin: 1rem auto;
+      } */
 
   
   /* BOUTON FICHE MEMBRE*/
   .page_membre{
     text-align: center;
     list-style: none;
-  }
-  .photo_membre{
-    display: flex;
-    justify-content: center; 
-    align-items: center;   
-  }
-  img{
-  width: 15%;
   }
   
   .bouton_accueil{
@@ -454,7 +434,6 @@ input[type="submit"]{
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centre horizontalement */
-  /* align-items: center; */ /* Centre verticalement */
   width: 60%;
   margin: 1rem auto;
   padding: 1rem;
@@ -462,7 +441,7 @@ input[type="submit"]{
   color: #0D0D0D;
   border-radius: 1rem;
   gap: 0.2rem;
-  /* text-align: center; */
+
 }
 .creer_event label{
   color: #fff;
@@ -504,6 +483,8 @@ input[type="submit"]{
 img{
 width: 15%;
 }
+
+/* PAGE STORE.BLADE */
 .event_enregistre{
   color: #fff;
   background-color: var(--bgcolor-bouton);
@@ -544,10 +525,34 @@ width: 15%;
   object-fit: cover;
 }
 
+/* ADMIN MODIF EVENT */
+.bouton_admin{
+  display: block;
+  justify-content: center; 
+  align-items: center;
+  gap: 0.5rem;
+ /*  margin: 2rem auto; */
+}
+.clic_modif {
+  display: block;
+  justify-content: center; 
+  align-items: center;
+  background-color: #AE6BF2;
+  color: #fff;
+  border-radius: 2rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  height: 10%;
+  margin: 1rem;
+}
 /* afficher events user*/
 .show_event{
   width: 100%;
- 
+  height: 100vh;
   scroll-behavior: smooth;
 }
 
@@ -559,8 +564,14 @@ width: 15%;
    .img_logo img{
     width: 20%;
     height: auto;
+    margin: 2rem;
   } 
-  
+  .img_logo_log img{
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
 .img{
     width: 100%;
     border-radius: 2rem;

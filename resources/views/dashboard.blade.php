@@ -15,11 +15,12 @@
                     <h2 class="h2_fiche">Fiche Membre: {{Auth::user()->prenom}}</h2>
                     @auth
                         @if (Auth::user()->is_admin)
-                            <ul>
+                            <ul class="ul_fiche_membre">
                                 @foreach( $users as $user)
                                     <li>Nom: {{$user->nom}}</li>
                                     <li>Prénom: {{$user->prenom}}</li>
                                     <li>Age: {{$user->age}}</li>
+                                    <hr/>
                                 @endforeach
                             </ul> 
                         

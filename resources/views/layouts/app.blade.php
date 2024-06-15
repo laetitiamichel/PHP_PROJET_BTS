@@ -10,7 +10,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        
+        {{-- FAVICONE --}}
+        <link  rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+        <link rel="manifest" href="/assets/favicon/site.webmanifest">
         <!-- Scripts -->
         {{-- @vite => necessite NPM --}} 
 {{--pour inclure mon css => on retire vite et on rajoute un link avec lien vers dossier css href="/css..." --}}

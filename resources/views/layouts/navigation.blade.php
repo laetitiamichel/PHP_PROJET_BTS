@@ -21,9 +21,6 @@
                     <x-nav-link :href="route('events.all_events')" :active="request()->routeIs('events.all_events')">
                     {{ __('Mes évènements') }}
                     </x-nav-link>
-                    {{-- <x-nav-link :href="route('events.edit')" :active="request()->routeIs('events.edit')">
-                        {{ __('Modifier un évènements') }}
-                        </x-nav-link>   --}}
                 </div>
             </div>
 

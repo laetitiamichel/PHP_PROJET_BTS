@@ -26,24 +26,24 @@
 
         <!-- Remember Me block mt-4 // inline-flex items-center//ms-2 text-sm text-gray-600 dark:text-gray-400// ms-3 //flex items-center justify-end mt-4-->
         <div class="login">
-        <div class="validation">
-            <label for="remember_me" class="remember_me">
-                <input id="remember_me" type="checkbox" class="remember_me_box" name="remember">
-                <span class="remember_me_span">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+            <div >
+                <label for="remember_me" class="remember_me">
+                    <input id="remember_me" type="checkbox" class="remember_me_box" name="remember">
+                    <span class="remember_me_span">{{ __('Se souvenir de moi') }}</span>
+                </label>
+            </div>
 
-        <div class="forgot">
-            @if (Route::has('password.request'))
-                <a class="forgot_password" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+            <div class="forgot">
+                @if (Route::has('password.request'))
+                    <a class="forgot_password" href="{{ route('password.request') }}">
+                        {{ __('Mot de passe oublié?') }}
+                    </a>
+                @endif
 
-            <x-primary-button class="log_in">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
+                <x-primary-button class="log_in">
+                    {{ __('Se connecter') }}
+                </x-primary-button>
+            </div>
         </div>
     </form>
 </x-guest-layout>
