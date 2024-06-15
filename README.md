@@ -21,13 +21,13 @@
 
 # Création du MCD:
 ```
-CLIENTS: id_membre, nom, prenom, age, ville, e-mail,image
+USERS: user_id, nom, prenom, age, ville, e-mail,password, is_admin
 
-PUBLIER, 11 EVENEMENT, 0N CLIENTS
+PUBLIER, 11 EVENTS, 0N USERS
 
-EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
+EVENTS: id, nom, description, date_creation, date_modification, image, user_id
 ```
-![mocodo](./public/assets/MCD_LIGUES.png)
+![mocodo](./public/assets/new_MCD.png)
 
 # Arbre euristique:
 ![arbre](./public/assets/arbre_projet_web.png)
