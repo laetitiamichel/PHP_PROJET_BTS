@@ -1,7 +1,8 @@
-Application MVC réalisée avec le framework laravel.
-Application de sport où vous pouvez vous inscrire, créer un compte, publier des évènements.
-**Administrateur:  julie.audoux@gmail.com / mdp: julieaudoux**
-L'administrateur pour modifier ou supprimer un évènement.
+* Application MVC réalisée avec le framework laravel.
+* Application de sport où vous pouvez vous inscrire, créer un compte, publier des évènements.
+* **Administrateur:  julie.audoux@gmail.com / mdp: julieaudoux**
+* **ou vivi@gmail.com / mdp: vivivivi**
+* L'administrateur pour modifier ou supprimer un évènement.
 
 [lien du site](https://laetitiamichel.github.io/PHP_PROJET_BTS/)
 ---
@@ -20,13 +21,13 @@ L'administrateur pour modifier ou supprimer un évènement.
 
 # Création du MCD:
 ```
-CLIENTS: id_membre, nom, prenom, age, ville, e-mail,image
+USERS: user_id, nom, prenom, age, ville, e-mail,password, is_admin
 
-PUBLIER, 11 EVENEMENT, 0N CLIENTS
+PUBLIER, 11 EVENTS, 0N USERS
 
-EVENEMENT: id_even, nom, desc, date_creation, date_modification, image
+EVENTS: id, nom, description, date_creation, date_modification, image, user_id
 ```
-![mocodo](./public/assets/MCD_LIGUES.png)
+![mocodo](./public/assets/new_MCD.png)
 
 # Arbre euristique:
 ![arbre](./public/assets/arbre_projet_web.png)
