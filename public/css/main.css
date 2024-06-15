@@ -113,6 +113,18 @@ body{
    .display_grid {
     display: grid;
     width: 80%;
+    margin: 2rem auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style: none;
+    background-color: #3E3E40;
+    border-radius: 1rem; 
+ 
+     }
+/* AFFICHAGE MY EVENTS */
+     .display_grid_my{
+      display: grid;
+    width: 100%;
     height: 100%;
     margin: 2rem auto;
     grid-template-columns: repeat(4, 1fr);
@@ -120,7 +132,7 @@ body{
     list-style: none;
     background-color: #3E3E40;
     border-radius: 1rem; 
-   
+ 
      }
      /* TITRE EVENT */
      .h3_events{
@@ -139,16 +151,89 @@ body{
       text-align: center;
     }
     /* IMAGE EVENT */
-     li.img_accueil{
-      height: 70%;
-      gap:0;
-    }
-     .img_accueil img{
+    .photo_event_accueil img{
       width: 100%;
-      height: 70%;
+      
+      /* object-fit: cover; */
+    }
+     li.img_accueil{
+     height: 40rem;
+    
+    }
+   .img_accueil img{
+      width: 100%;
+      height: 50%;
       object-fit: cover;
-      }
-     
+      } 
+     /* AFFICHER ALL EVENTS */
+
+.h1_all_events{
+  color: #fff;
+  background-color: #AE6BF2;
+  font-size: xx-large;
+  text-align: center;
+}
+.all_events_list{
+  background-color: #F2A0ED;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem auto;
+  color: #fff!important;
+  padding: 0.1rem;
+  
+}
+.all_events_description{
+  background-color: #fff;
+  color: #0D0D0D;
+}
+.photo_event_all{
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem auto;
+  object-fit: cover;
+}
+
+/* ADMIN MODIF EVENT */
+.bouton_admin{
+  display: block;
+  justify-content: center; 
+  align-items: center;
+  gap: 0.5rem;
+ /*  margin: 2rem auto; */
+}
+.clic_modif {
+  display: block;
+  justify-content: center; 
+  align-items: center;
+  background-color: #AE6BF2;
+  color: #fff;
+  border-radius: 2rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80%;
+  height: 10%;
+  margin: 1rem;
+}
+/* afficher events user*/
+.show_event{
+  margin: 1rem auto;
+  width: 80%;
+  scroll-behavior: smooth;
+}
+.show_event_my{
+  margin: 1rem auto;
+  width: 80%;
+  scroll-behavior: smooth;
+}
+
+
       /* BOUTON INSCRIPTION/CONNEXION ACCUEIL */
       .bouton_inscription{
         display: flex;
@@ -493,68 +578,6 @@ width: 15%;
   padding: 3rem;
 }
 
-/* AFFICHER ALL EVENTS */
-
-.h1_all_events{
-  color: #fff;
-  background-color: #AE6BF2;
-  font-size: xx-large;
-  text-align: center;
-}
-.all_events_list{
-  background-color: #F2A0ED;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 1rem auto;
-  color: #fff!important;
-  padding: 0.1rem;
-  
-}
-.all_events_description{
-  background-color: #fff;
-  color: #0D0D0D;
-}
-.photo_event_all{
-  width: 30%;
-  height: 30%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 1rem auto;
-  object-fit: cover;
-}
-
-/* ADMIN MODIF EVENT */
-.bouton_admin{
-  display: block;
-  justify-content: center; 
-  align-items: center;
-  gap: 0.5rem;
- /*  margin: 2rem auto; */
-}
-.clic_modif {
-  display: block;
-  justify-content: center; 
-  align-items: center;
-  background-color: #AE6BF2;
-  color: #fff;
-  border-radius: 2rem;
-  text-decoration: none;
-  text-align: center;
-  font-size: larger;
-  font-weight: bold;
-  cursor: pointer;
-  width: 80%;
-  height: 10%;
-  margin: 1rem;
-}
-/* afficher events user*/
-.show_event{
-  width: 100%;
-  height: 100vh;
-  scroll-behavior: smooth;
-}
 
 /*  //////////////////////////// */
   footer{

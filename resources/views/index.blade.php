@@ -46,15 +46,16 @@
             </div>       
         @endif
     </nav>
-    <h2 class="h2_accueil" id="accueil">
+   {{--  <h2 class="h2_accueil" id="accueil">
         Prêt(e) à la compétition ? </br>Cliquez sur le bouton pour commencer
-    </h2>
+    </h2> --}}
     </div>
     <p class="p_accueil">
         Tous les mois profitez de toutes les nouveautés et opportunités.
     </br>A partir du mois prochain, on vous propose toutes les séances de sport sur vos supports préférés.
     </p>
-    <ul class="display_grid">
+    <div class="show_event_my">
+    <ul class="display_grid_my">
         @foreach( $events as $event)
                 <li class="img_accueil">
                     <h3 class="h3_events">{{$event->nom}}</h3>
@@ -65,6 +66,7 @@
                 </li>
             @endforeach
     </ul>
+    </div>
     @auth
     @else
     <div class="bouton_inscription">

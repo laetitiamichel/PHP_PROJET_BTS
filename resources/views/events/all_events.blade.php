@@ -5,14 +5,14 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
+    <div {{-- class="py-12" --}}>
+        <div {{-- class="max-w-7xl mx-auto sm:px-6 lg:px-8" --}}>
+            <div {{-- class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg" --}}>
+                <div {{-- class="p-6 text-gray-900 dark:text-gray-100" --}}>
                     <h1 class="h1_all_events">Afficher Mes évènements</h1>
-                    <div class="show_event">
+                    <div class="show_event_my">
                         @auth
-                        <ul class="display_grid">     
+                        <ul class="display_grid_my">     
                                 @foreach( $events as $event)
                                         <li class="img_accueil"> 
                                             <h3 class="h3_events">{{$event->nom}}</h3>
@@ -33,9 +33,11 @@
                                                 </from>
                                             </div>
                                             @endif
-                                        </li>   
+                                        </li> 
+                                      
                                 @endforeach
-                        </ul>
+                            
+                            </ul>
         
                         
                         {{-- <x-primary-button class="mt-4">{{ __('events') }}</x-primary-button> --}}
