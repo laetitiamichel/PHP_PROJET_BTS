@@ -27,7 +27,7 @@ PUBLIER, 11 EVENTS, 0N USERS
 
 EVENTS: id, nom, description, date_creation, date_modification, image, user_id
 ```
-![mocodo](./public/assets/new_MCD.png)
+![mocodo](./public/assets/BTS_MCD.png)
 
 # Arbre euristique:
 ![arbre](./public/assets/arbre_projet_web.png)
