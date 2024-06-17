@@ -19,7 +19,8 @@
                                 @foreach( $users as $user)
                                     <li>Nom: {{$user->nom}}</li>
                                     <li>Prénom: {{$user->prenom}}</li>
-                                    <li>Age: {{$user->age}}</li>
+                                    {{-- <li>Date de naissance : {{ $user->date_naissance->format('d/m/Y') }}</li> --}}
+                                    <li>Age: {{$user->date_naissance}}</li>
                                     <hr/>
                                 @endforeach
                             </ul> 

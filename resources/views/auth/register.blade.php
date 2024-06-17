@@ -13,12 +13,21 @@
             <x-text-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus autocomplete="prenom" />
             <x-input-error :messages="$errors->get('prenom')" class="mt-2" />
         </div>
+
+         <!--Date Naissance -->
+         <div>
+            <x-input-label for="date_naissance" :value="__('date naissance')" />
+            <x-text-input id="date_naissance" class="block mt-1 w-full" type="date" name="date_naissance" :value="old('date_naissance')" required autofocus autocomplete="date_naissance" />
+            <x-input-error :messages="$errors->get('date_naissance')" class="mt-2" />
+        </div>
+
+
         {{-- AGE --}}
         <div>
             <x-input-label for="age" :value="__('Age')" />
             <x-text-input id="age" class="block mt-1 w-full" type="text" name="age" :value="old('age')" required autofocus autocomplete="age" />
             <x-input-error :messages="$errors->get('age')" class="mt-2" />
-        </div>
+        </div> 
         {{-- VILLE --}}
         <div>
             <x-input-label for="ville" :value="__('Ville')" />

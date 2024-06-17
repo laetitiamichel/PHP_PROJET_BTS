@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Carbon\Carbon;
 
 class RegisteredUserController extends Controller
 {
@@ -29,6 +30,7 @@ class RegisteredUserController extends Controller
          $validatedData = $request->validate([
             'nom' => ['required', 'string', 'max:255'],
             'prenom' => ['required', 'string', 'max:255'],
+            'date_naissance' => ['required', 'date'], // Ajout de la validation de la date de naissance
             'age' => ['required', 'string', 'max:255'],
             'ville' => ['required', 'string', 'max:255'],
         ]);
@@ -49,6 +51,13 @@ class RegisteredUserController extends Controller
         $request->validate([
             'nom' => ['required', 'string', 'max:255'],
             'prenom' => ['required', 'string', 'max:255'],
+            'date_naissance'=>['required', 'date', /* 'before:' . Carbon::now()->subYears(18)->format('Y-m-d')], */
+          function ($attribute, $value, $fail) {
+                $age = Carbon::parse($value)->age;
+                if ($age < 18) {
+                    $fail('Vous devez avoir plus de 18 ans pour vous inscrire.');
+                }
+            }],
             'age' => ['required', 'string', 'max:255'],
             'ville' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -59,6 +68,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
+            'date_naissance' => $request->date_naissance,
             'age' => $request->age,
             'ville' => $request->ville,
             'email' => $request->email,

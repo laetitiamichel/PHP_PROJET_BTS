@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -20,13 +21,19 @@ class User extends Authenticatable
     protected $fillable = [
         'nom',
         'prenom',
+        'date_naissance',
         'age',
         'ville',
         'email',
         'password',
-        'photo',
         'is_admin',
+
     ];
+     // Accesseur pour l'âge
+     public function getAgeAttribute()
+     {
+         return Carbon::parse($this->attributes['date_naissance'])->age;
+     }
 
     /**
      * The attributes that should be hidden for serialization.
